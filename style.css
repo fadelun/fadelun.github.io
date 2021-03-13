@@ -1,0 +1,15 @@
+* {
+  font-family: "Helvetica";
+}
+
+.jumbotron {
+  background-color: #ffe6bf;
+  /* padding-bottom: 10rem; */
+}
+
+#projects {
+  background-color: #ffe6bf;
+}
+section {
+  padding-top: 4rem;
+}
