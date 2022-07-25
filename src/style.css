@@ -607,28 +607,56 @@ html {
   margin-top: 1.5rem;
 }
 
-.mb-16{
-  margin-bottom: 4rem;
+.mb-24{
+  margin-bottom: 6rem;
 }
 
-.mb-10{
-  margin-bottom: 2.5rem;
-}
-
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
-.mt-10{
-  margin-top: 2.5rem;
+.mb-12{
+  margin-bottom: 3rem;
 }
 
 .mt-28{
   margin-top: 7rem;
 }
 
-.mb-12{
-  margin-bottom: 3rem;
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-56{
+  margin-bottom: 14rem;
+}
+
+.mb-28{
+  margin-bottom: 7rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.ml-20{
+  margin-left: 5rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .block{
@@ -667,6 +695,78 @@ html {
   height: 66.666667%;
 }
 
+.h-20{
+  height: 5rem;
+}
+
+.h-48{
+  height: 12rem;
+}
+
+.h-60{
+  height: 15rem;
+}
+
+.h-28{
+  height: 7rem;
+}
+
+.h-1\/3{
+  height: 33.333333%;
+}
+
+.h-64{
+  height: 16rem;
+}
+
+.h-44{
+  height: 11rem;
+}
+
+.h-3\/4{
+  height: 75%;
+}
+
+.h-1\/4{
+  height: 25%;
+}
+
+.h-\[300px\]{
+  height: 300px;
+}
+
+.h-\[250px\]{
+  height: 250px;
+}
+
+.h-\[20px\]{
+  height: 20px;
+}
+
+.h-\[200px\]{
+  height: 200px;
+}
+
+.max-h-\[400px\]{
+  max-height: 400px;
+}
+
+.min-h-\[300px\]{
+  min-height: 300px;
+}
+
+.min-h-\[350px\]{
+  min-height: 350px;
+}
+
+.min-h-\[200px\]{
+  min-height: 200px;
+}
+
+.min-h-\[220px\]{
+  min-height: 220px;
+}
+
 .w-full{
   width: 100%;
 }
@@ -675,12 +775,32 @@ html {
   width: 2rem;
 }
 
+.w-1\/3{
+  width: 33.333333%;
+}
+
+.w-40{
+  width: 10rem;
+}
+
+.w-\[120\%\]{
+  width: 120%;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
 
+.list-none{
+  list-style-type: none;
+}
+
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -695,6 +815,14 @@ html {
   flex-wrap: wrap;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
 }
@@ -705,6 +833,14 @@ html {
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
 }
 
 .gap-4{
@@ -723,6 +859,16 @@ html {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -733,6 +879,10 @@ html {
 
 .border-2{
   border-width: 2px;
+}
+
+.border-none{
+  border-style: none;
 }
 
 .border-black{
@@ -778,12 +928,21 @@ html {
   padding-right: 9rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
 
 .text-center{
   text-align: center;
+}
+
+.align-middle{
+  vertical-align: middle;
 }
 
 .text-base{
@@ -799,29 +958,14 @@ html {
   font-size: 2vw;
 }
 
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-medium{
@@ -842,14 +986,6 @@ html {
 
 .leading-relaxed{
   line-height: 1.625;
-}
-
-.leading-3{
-  line-height: .75rem;
-}
-
-.leading-8{
-  line-height: 2rem;
 }
 
 .leading-7{
@@ -898,6 +1034,10 @@ html {
 }
 
 @media (min-width: 768px){
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
@@ -929,6 +1069,14 @@ html {
     width: auto;
   }
 
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:items-center{
     align-items: center;
   }
@@ -952,5 +1100,11 @@ html {
 
   .lg\:pt-0{
     padding-top: 0px;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
