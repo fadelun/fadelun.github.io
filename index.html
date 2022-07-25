@@ -48,7 +48,8 @@
         <!-- navbar -->
         <div class="navbar-1-1" >
             <div class="container mx-auto flex flex-wrap flex-row items-center justify-between">
-              <a href="" class="flex font-medium items-center">
+              <!-- logo -->
+              <!-- <a href="" class="flex font-medium items-center">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3.5 15.75C3.5 8.98451 8.98451 3.5 15.75 3.5H29.75C30.7165 3.5 31.5 4.2835 31.5 5.25C31.5 6.2165 30.7165 7 29.75 7H15.75C10.9175 7 7 10.9175 7 15.75V29.75C7 30.7165 6.2165 31.5 5.25 31.5C4.2835 31.5 3.5 30.7165 3.5 29.75V15.75Z"
@@ -57,7 +58,7 @@
                     d="M10.5 17.5C10.5 13.634 13.634 10.5 17.5 10.5H31.5C35.366 10.5 38.5 13.634 38.5 17.5V31.5C38.5 35.366 35.366 38.5 31.5 38.5H17.5C13.634 38.5 10.5 35.366 10.5 31.5V17.5Z"
                     fill="#0EC8F8" />
                 </svg>
-              </a>
+              </a> -->
               <label for="menu-toggle" class="cursor-pointer lg:hidden block">
                 <svg class="w-8 h-8" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -76,30 +77,30 @@
                   
                 </nav>
               </div>
-      
-              <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+            <!-- button -->
+              <!-- <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
                 <button
                   class="btn-fill text-white items-center border-0 py-3 px-8 focus:outline-none rounded-2xl font-medium text-base mt-6 lg:mt-0">
                   Get Started
                 </button>
-              </div>
+              </div> -->
             </div>
         </div>
         <!-- jumbotron -->
         <div class="jumbotron text-white h-[75vh] flex flex-col justify-center items-center">
-            <h1 class="text-[6vw] p-3 font-semibold">Muhammad Fadll</h1>
-            <p class="text-[2vw] p-1 font-light uppercase tracking-[0.8rem]">Ui / ux / Frontend</p>
+            <h1 class="text-[6vw] lg:text-[72px] p-3 font-semibold">Muhammad Fadll</h1>
+            <p class="text-[2vw] lg:text-[28px] p-1 font-light uppercase tracking-[0.8rem]">Ui / ux / Frontend</p>
         </div>
     </Header>
     <main class="container mx-auto py-14 ">
         <!-- about -->
-        <div id="about" class="py-6 text-center px-36 mb-56">
+        <div id="about" class="py-6 text-center px-8 lg:px-36 mb-56">
             <h2 class="text-3xl font-semibold mb-12 uppercase">About Me</h2>
             <p class="text-gray-400  tracking-wide leading-relaxed">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illo exercitationem nulla commodi labore, aliquid tempora. Esse maxime similique obcaecati magni nobis nisi sed laborum blanditiis, provident repellat eum officiis?</p>
 
 
-            <div class="skill flex justify-around mt-28">
-                <div class="skill-1">
+            <div class="skill flex flex-col md:flex-row justify-around space-y-28 md:space-y-0 mt-28">
+                <div class="skill-1 ">
                     <h3 class="text-xl font-medium mb-5">UI / UX Design</h3>
                     <ul class="text-gray-400 leading-7">
                         <li>User Interface Design</li>
@@ -107,7 +108,7 @@
                         <li>Wireframing</li>
                     </ul>
                 </div>
-                <div class="skill-2">
+                <div class="skill-2 ">
                     <h3 class="text-xl font-medium mb-5">Frontend Development</h3>
                     <ul class="text-gray-400 leading-7">
                         <li>HTML5 & CSS3</li>
@@ -123,11 +124,11 @@
             </div>
         </div>
         <!-- works -->
-        <div id="works" class="py-6 text-center px-36 mb-56">
+        <div id="works" class="py-6 text-center px-8 lg:px-36 mb-56">
             <h2 class="text-3xl font-semibold mb-6 uppercase">My Works</h2>
             <p class="text-gray-400 tracking-wide leading-relaxed">Project iseng-iseng</p>
             <!-- cards -->
-            <div class="cards mt-12 grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-4">
+            <div class="cards mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
               <div class="card  max-h-[400px] min-h-[200px] border-2 border-black ">
                   
                       <div class="image-contain w-full h-2/3 overflow-hidden">
@@ -199,7 +200,7 @@
 
         <!-- contacts -->
         <div id="contacs" class="py-6 text-center px-36">
-          <h2 class="text-3xl font-semibold mb-6 uppercase mb-10">Get In Touch</h2>
+          <h2 class="text-3xl font-semibold  uppercase mb-10">Get In Touch</h2>
           <ul class="flex justify-center ">
             <li class="mr-10"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ec8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
             <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ec8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
@@ -207,8 +208,8 @@
         </div>
     </main>
     <footer class="bg-black">
-      <div class="container mx-auto py-14 text-white">
-        <p>Created with love by <a href="https://www.instagram.com/fadelun_10/" class="font-semibold">Muhammad Fadll</a></p>
+      <div class="container mx-auto py-14 px-8 lg:px-36 text-white">
+        <p>Created with love by <a href="https://www.instagram.com/fadelun_10/" class="font-semibold">Muhammad Fadll</a>©</p>
 
       </div>
     </footer>
