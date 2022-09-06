@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>my portfolio</title>
 
-    <link rel="stylesheet" href="./src/style.css">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer ></script> 
+    <link rel="stylesheet" href="./src/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"
+      defer
+    ></script>
     <style scoped>
-        .navbar-1-1 .btn-fill {
-          background-color: #0ec8f8;
-          transition: 0.3s;
-        }
-  
-        .navbar-1-1 .btn-fill:hover {
-          background-color: #3ad8ff;
-          transition: 0.3s;
-        }
-  
-        .navbar-1-1 nav a.nav-link {
-          color: #ffffff;
-          transition: 0.3s;
-        }
-  
-        .navbar-1-1 nav a.nav-link:hover {
-          color: #ffffff;
-          font-weight: 500;
-          transition: 0.3s;
-        }
-  
-        .navbar-1-1 nav a.nav-link.active {
-          color: #3ad8ff;
-        }
-  
-        .navbar-1-1 #menu-toggle:checked+#menu,
-        .navbar-1-1 #menu-toggle:checked+#menu+#menu {
-          display: block;
-        }
-      </style>
+      .navbar-1-1 .btn-fill {
+        background-color: #0ec8f8;
+        transition: 0.3s;
+      }
 
-</head>
-<body class="h-full w-full border-box transition-all duration-500 linear ">
+      .navbar-1-1 .btn-fill:hover {
+        background-color: #3ad8ff;
+        transition: 0.3s;
+      }
+
+      .navbar-1-1 nav a.nav-link {
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+      .navbar-1-1 nav a.nav-link:hover {
+        color: #ffffff;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .navbar-1-1 nav a.nav-link.active {
+        color: #3ad8ff;
+      }
+
+      .navbar-1-1 #menu-toggle:checked + #menu,
+      .navbar-1-1 #menu-toggle:checked + #menu + #menu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="h-full w-full border-box transition-all duration-500 linear">
     <!-- header -->
-    <Header class="bg-black lg:px-24 md:px-20 px-8 py-6 h-[50]">
-        <!-- navbar -->
-        <div class="navbar-1-1" >
-            <div class="container mx-auto flex flex-wrap flex-row items-center justify-between">
-              <!-- logo -->
-              <!-- <a href="" class="flex font-medium items-center">
+    <header class="bg-black lg:px-24 md:px-20 px-8 py-6 h-[50]">
+      <!-- navbar -->
+      <div class="navbar-1-1">
+        <div
+          class="container mx-auto flex flex-wrap flex-row items-center justify-between"
+        >
+          <!-- logo -->
+          <!-- <a href="" class="flex font-medium items-center">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3.5 15.75C3.5 8.98451 8.98451 3.5 15.75 3.5H29.75C30.7165 3.5 31.5 4.2835 31.5 5.25C31.5 6.2165 30.7165 7 29.75 7H15.75C10.9175 7 7 10.9175 7 15.75V29.75C7 30.7165 6.2165 31.5 5.25 31.5C4.2835 31.5 3.5 30.7165 3.5 29.75V15.75Z"
@@ -59,79 +63,208 @@
                     fill="#0EC8F8" />
                 </svg>
               </a> -->
-              <label for="menu-toggle" class="cursor-pointer lg:hidden block">
-                <svg class="w-8 h-8" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </label>
-              <input class="hidden" type="checkbox" id="menu-toggle" />
-              <div
-                class="hidden lg:flex lg:items-center lg:w-auto w-full lg:ml-auto lg:mr-auto flex-wrap items-center text-base justify-center"
-                id="menu">
-                <nav
-                  class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6 ">
-                  <a href="" class="block nav-link active font-medium">Home</a>
-                  <a href="" class="block nav-link">About</a>
-                  <a href="" class="block nav-link">Works</a>
-                  <a href="" class="block nav-link">Contacts</a>
-                  
-                </nav>
-              </div>
-            <!-- button -->
-              <!-- <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+          <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="#ffffff"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+          <input class="hidden" type="checkbox" id="menu-toggle" />
+          <div
+            class="hidden lg:flex lg:items-center lg:w-auto w-full lg:ml-auto lg:mr-auto flex-wrap items-center text-base justify-center"
+            id="menu"
+          >
+            <nav
+              class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6"
+            >
+              <a href="" class="block nav-link active font-medium">Home</a>
+              <a href="" class="block nav-link">About</a>
+              <a href="" class="block nav-link">Works</a>
+              <a href="" class="block nav-link">Contacts</a>
+            </nav>
+          </div>
+          <!-- button -->
+          <!-- <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
                 <button
                   class="btn-fill text-white items-center border-0 py-3 px-8 focus:outline-none rounded-2xl font-medium text-base mt-6 lg:mt-0">
                   Get Started
                 </button>
               </div> -->
-            </div>
         </div>
-        <!-- jumbotron -->
-        <div class="jumbotron text-white h-[75vh] flex flex-col justify-center items-center">
-            <h1 class="text-[6vw] lg:text-[72px] p-3 font-semibold">Muhammad Fadll</h1>
-            <p class="text-[2vw] lg:text-[28px] p-1 font-light uppercase tracking-[0.8rem]">Ui / ux / Frontend</p>
-        </div>
-    </Header>
-    <main class="container mx-auto py-14 ">
-        <!-- about -->
-        <div id="about" class="py-6 text-center px-8 lg:px-36 mb-56">
-            <h2 class="text-3xl font-semibold mb-12 uppercase">About Me</h2>
-            <p class="text-gray-400  tracking-wide leading-relaxed">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illo exercitationem nulla commodi labore, aliquid tempora. Esse maxime similique obcaecati magni nobis nisi sed laborum blanditiis, provident repellat eum officiis?</p>
+      </div>
+      <!-- jumbotron -->
+      <div
+        class="jumbotron text-white h-[75vh] flex flex-col justify-center items-center"
+      >
+        <h1 class="text-[6vw] lg:text-[72px] p-3 font-semibold">
+          Muhammad Fadll
+        </h1>
+        <p
+          class="text-[2vw] lg:text-[28px] p-1 font-light uppercase tracking-[0.8rem]"
+        >
+          Ui / ux / Frontend
+        </p>
+      </div>
+    </header>
+    <main class="container mx-auto py-14">
+      <!-- about -->
+      <div id="about" class="py-6 text-center px-8 lg:px-36 mb-56">
+        <h2 class="text-3xl font-semibold mb-12 uppercase">About Me</h2>
+        <p class="text-gray-400 tracking-wide leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
+          illo exercitationem nulla commodi labore, aliquid tempora. Esse maxime
+          similique obcaecati magni nobis nisi sed laborum blanditiis, provident
+          repellat eum officiis?
+        </p>
 
+        <div
+          class="skill flex flex-col md:flex-row justify-around space-y-28 md:space-y-0 mt-28"
+        >
+          <div class="skill-1 w-2/6">
+            <h3 class="text-xl font-medium mb-5">UI / UX Design</h3>
+            <ul class="text-gray-400 leading-7">
+              <li>User Interface Design</li>
+              <li>User Experience Thinking</li>
+              <li>Wireframing</li>
+            </ul>
+          </div>
+          <div class="skill-2 w-2/6">
+            <h3 class="text-xl font-medium mb-5">Frontend Development</h3>
+            <ul class="text-gray-400 leading-7 flex justify-around flex-wrap">
+              <!-- <a target="_blank" href="https://icons8.com/icon/20909/html-5">Html 5</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+              <!-- <a target="_blank" href="https://icons8.com/icon/21278/css3">CSS3</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
 
-            <div class="skill flex flex-col md:flex-row justify-around space-y-28 md:space-y-0 mt-28">
-                <div class="skill-1 ">
-                    <h3 class="text-xl font-medium mb-5">UI / UX Design</h3>
-                    <ul class="text-gray-400 leading-7">
-                        <li>User Interface Design</li>
-                        <li>User Experience Thinking</li>
-                        <li>Wireframing</li>
-                    </ul>
-                </div>
-                <div class="skill-2 ">
-                    <h3 class="text-xl font-medium mb-5">Frontend Development</h3>
-                    <ul class="text-gray-400 leading-7">
-                        <li>HTML5 & CSS3</li>
-                        <li>Javascript</li>
-                        <li>SASS</li>
-                        <li>Booststrap</li>
-                        <li>Tailwindcss</li>
-                        
-                    </ul>
-                </div>
-                
-                
-            </div>
+              <li class="w-1/3 p-2">
+                <svg
+                  fill="none"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 124 141.53199999999998"
+                >
+                  <path
+                    d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z"
+                    fill="#e34f26"
+                  />
+                  <path
+                    d="M62.468 129.277V12.085l51.064.17-9.106 104.851z"
+                    fill="#ef652a"
+                  />
+                  <path
+                    d="M99.49 41.362l1.446-15.49H22.383l4.34 47.49h54.213L78.81 93.617l-17.362 4.68-17.617-5.106-.936-12.085H27.319l2.128 24.681 32 8.936 32.255-8.936 4.34-48.17H41.107L39.49 41.362z"
+                    fill="#fff"
+                  />
+                </svg>
+              </li>
+              <li class="w-1/3 p-2">
+                <svg
+                  fill="none"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 124 141.53"
+                >
+                  <path
+                    d="M10.383 126.892L0 0l124 .255-10.979 126.637-50.553 14.638z"
+                    fill="#1b73ba"
+                  />
+                  <path
+                    d="M62.468 129.275V12.085l51.064.17-9.106 104.85z"
+                    fill="#1c88c7"
+                  />
+                  <path
+                    d="M100.851 27.064H22.298l2.128 15.318h37.276l-36.68 15.745 2.127 14.808h54.043l-1.958 20.68-18.298 3.575-16.595-4.255-1.277-11.745H27.83l2.042 24.426 32.681 9.106 31.32-9.957 4-47.745H64.765l36.085-14.978z"
+                    fill="#fff"
+                  />
+                </svg>
+              </li>
+              <li class="w-1/3 p-2">
+                <svg
+                  fill="none"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 124 141.53199999999998"
+                >
+                  <path
+                    d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z"
+                    fill="#e9ca32"
+                  />
+                  <path
+                    d="M62.468 129.277V12.085l51.064.17-9.106 104.851z"
+                    fill="#ffde25"
+                  />
+                  <g fill="#fff">
+                    <path
+                      d="M57 26H43.5v78L33 102V91.5l-12.5-2V113l36.5 9.5zM67.127 26H104.5L102 40.95H81.394v24.533H102L99.5 115l-32.373 7.5V107L89 99.5 90.263 79l-23.136 3.35z"
+                    />
+                  </g>
+                </svg>
+              </li>
+              <li class="w-1/3 p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  viewBox="0 0 512 384"
+                >
+                  <path
+                    fill="#CF649A"
+                    d="M440.6 220.6c-17.9.101-33.4 4.4-46.4 10.801-4.8-9.5-9.6-17.801-10.399-24-.9-7.2-2-11.601-.9-20.2C384 178.6 389 166.4 389 165.4c-.101-.9-1.101-5.3-11.4-5.4s-19.2 2-20.2 4.7-3 8.9-4.3 15.3c-1.8 9.4-20.6 42.7-31.3 60.2-3.5-6.8-6.5-12.8-7.101-17.601-.899-7.199-2-11.6-.899-20.199 1.1-8.601 6.1-20.8 6.1-21.8-.1-.9-1.1-5.3-11.399-5.4-10.301-.1-19.2 2-20.2 4.7s-2.1 9.1-4.3 15.3C281.9 201.4 256.9 257 250.4 271.5c-3.3 7.4-6.199 13.3-8.3 17.3-2.1 4-.1.3-.3.7-1.8 3.4-2.8 5.3-2.8 5.3v.101c-1.4 2.5-2.9 4.899-3.601 4.899-.5 0-1.5-6.7.2-15.899 3.7-19.301 12.7-49.4 12.601-50.5 0-.5 1.699-5.801-5.801-8.5-7.3-2.7-9.899 1.8-10.5 1.8-.6 0-1.1 1.6-1.1 1.6s8.1-33.899-15.5-33.899c-14.8 0-35.2 16.1-45.3 30.8-6.4 3.5-20 10.899-34.4 18.8-5.5 3-11.2 6.2-16.6 9.1L117.9 251.9c-28.6-30.5-81.5-52.1-79.3-93.1.8-14.9 6-54.2 101.601-101.8 78.3-39 141-28.3 151.899-4.5 15.5 34-33.5 97.2-114.899 106.3-31 3.5-47.301-8.5-51.4-13-4.3-4.7-4.9-4.9-6.5-4-2.6 1.4-1 5.6 0 8.1 2.4 6.3 12.4 17.5 29.4 23.1 14.899 4.9 51.3 7.6 95.3-9.4 49.3-19.1 87.8-72.1 76.5-116.4-11.5-45.1-86.3-59.9-157-34.8C121.4 27.4 75.8 50.8 43 81.5 4 117.9-2.2 149.7.4 162.9c9.101 47.1 74 77.8 100 100.5-1.3.699-2.5 1.399-3.6 2-13 6.399-62.5 32.3-74.9 59.699-14 31 2.2 53.301 13 56.301 33.4 9.3 67.6-7.4 86.1-34.9 18.399-27.5 16.2-63.2 7.7-79.5l-.301-.6 10.2-6c6.601-3.9 13.101-7.5 18.8-10.601-3.199 8.7-5.5 19-6.699 34-1.4 17.601 5.8 40.4 15.3 49.4 4.2 3.899 9.2 4 12.3 4 11 0 16-9.101 21.5-20 6.8-13.3 12.8-28.7 12.8-28.7s-7.5 41.7 13 41.7c7.5 0 15-9.7 18.4-14.7v.1s.2-.3.6-1a36.13 36.13 0 0 0 1.2-1.899v-.2c3-5.2 9.7-17.1 19.7-36.8 12.899-25.4 25.3-57.2 25.3-57.2s1.2 7.8 4.9 20.6c2.199 7.601 6.999 15.9 10.699 24-3 4.2-4.8 6.601-4.8 6.601l.1.1c-2.399 3.2-5.1 6.601-7.899 10-10.2 12.2-22.4 26.101-24 30.101-1.9 4.699-1.5 8.199 2.2 11 2.7 2 7.5 2.399 12.6 2 9.2-.601 15.6-2.9 18.8-4.301 5-1.8 10.7-4.5 16.2-8.5 10-7.399 16.1-17.899 15.5-31.899-.3-7.7-2.8-15.3-5.9-22.5.9-1.3 1.801-2.601 2.7-4 15.8-23.101 28-48.5 28-48.5s1.2 7.8 4.9 20.6c1.899 6.5 5.7 13.601 9.1 20.601-14.8 12.1-24.1 26.1-27.3 35.3-5.9 17-1.3 24.7 7.4 26.5 3.899.8 9.5-1 13.699-2.8 5.2-1.7 11.5-4.601 17.301-8.9 10-7.4 19.6-17.7 19.1-31.6-.3-6.4-2-12.7-4.3-18.7 12.6-5.2 28.899-8.2 49.6-5.7 44.5 5.2 53.3 33 51.601 44.6-1.7 11.601-11 18-14.101 20-3.1 1.9-4.1 2.601-3.8 4 .4 2.101 1.8 2 4.5 1.601 3.7-.601 23.4-9.5 24.2-30.899 1.2-27.504-24.9-57.504-71.2-57.205zM97.4 336.3c-14.7 16.1-35.4 22.2-44.2 17-9.5-5.5-5.801-29.2 12.3-46.3 11-10.4 25.3-20 34.7-25.9 2.1-1.3 5.3-3.199 9.1-5.5.6-.399 1-.6 1-.6.7-.4 1.5-.9 2.3-1.4 6.7 24.4.3 45.8-15.2 62.7zm107.5-73.1c-5.1 12.5-15.9 44.6-22.4 42.8-5.601-1.5-9-25.8-1.101-49.8 4-12.101 12.5-26.5 17.5-32.101 8.101-9 16.9-12 19.101-8.3 2.6 4.801-9.9 39.601-13.1 47.401zm88.7 42.4c-2.2 1.101-4.2 1.9-5.1 1.301-.7-.4.899-1.9.899-1.9s11.1-11.9 15.5-17.4c2.5-3.199 5.5-6.899 8.7-11.1v1.2C313.6 292.1 299.8 301.7 293.6 305.6zm68.399-15.6c-1.6-1.2-1.399-4.9 4-16.5 2.101-4.6 6.9-12.3 15.2-19.6 1 3 1.601 5.899 1.5 8.6-.099 18-12.899 24.7-20.7 27.5z"
+                  />
+                </svg>
+              </li>
+              <li class="w-1/3 p-2">
+                <svg
+                  width="100%"
+                  viewBox="0 0 512 407.864"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m106.344 0c-29.214 0-50.831 25.57-49.863 53.3.929 26.641-.278 61.145-8.964 89.283-8.717 28.217-23.449 46.098-47.517 48.393v25.912c24.068 2.3 38.8 20.172 47.516 48.393 8.687 28.138 9.893 62.642 8.964 89.283-.968 27.726 20.649 53.3 49.868 53.3h299.347c29.214 0 50.827-25.57 49.859-53.3-.929-26.641.278-61.145 8.964-89.283 8.717-28.221 23.413-46.1 47.482-48.393v-25.912c-24.068-2.3-38.764-20.172-47.482-48.393-8.687-28.134-9.893-62.642-8.964-89.283.968-27.726-20.645-53.3-49.859-53.3h-299.355zm240.775 251.067c0 38.183-28.481 61.34-75.746 61.34h-80.458a8.678 8.678 0 0 1 -8.678-8.678v-199.593a8.678 8.678 0 0 1 8.678-8.678h80c39.411 0 65.276 21.348 65.276 54.124 0 23.005-17.4 43.6-39.567 47.208v1.2c30.176 3.31 50.495 24.21 50.495 53.077zm-84.519-128.1h-45.876v64.8h38.639c29.87 0 46.34-12.028 46.34-33.527-.003-20.148-14.163-31.273-39.103-31.273zm-45.876 90.511v71.411h47.564c31.1 0 47.573-12.479 47.573-35.931s-16.935-35.484-49.573-35.484h-45.564z"
+                    fill="#7952b3"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </li>
+              <li class="w-1/3 p-2">
+                <svg
+                  preserveAspectRatio="xMidYMid"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 153.6"
+                >
+                  <linearGradient id="a" x1="-2.778%" y1="32%" y2="67.556%">
+                    <stop offset="0" stop-color="#2298bd" />
+                    <stop offset="1" stop-color="#0ed7b5" />
+                  </linearGradient>
+                  <path
+                    d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
+                    fill="url(#a)"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- works -->
-        <div id="works" class="py-6  px-8 md:px-12 mb-56">
-          <header class="text-center">
-            <h2 class="text-3xl font-semibold mb-6 uppercase">My Works</h2>
-            <p class="text-gray-400 tracking-wide leading-relaxed">Project iseng-iseng</p>
-          </header>
-            <!-- cards -->
-            <div class="cards mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
-              <!-- 
+      </div>
+      <!-- works -->
+      <div id="works" class="py-6 px-8 md:px-12 mb-56">
+        <header class="text-center">
+          <h2 class="text-3xl font-semibold mb-6 uppercase">My Works</h2>
+          <p class="text-gray-400 tracking-wide leading-relaxed">
+            Project iseng-iseng
+          </p>
+        </header>
+        <!-- cards -->
+        <div class="cards mt-12 grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
+          <!-- 
                 https://rest-countries-api-fadelun.vercel.app/
                 https://fadelun.github.io/time-tracking-dashboard
                 https://fadelun.github.io/Pricing-component-with-toggle/
@@ -141,119 +274,263 @@
 
                -->
 
-              <div class="card  max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8] ">
-                      <div class="image-contain w-full h-4/6 overflow-hidden" >
-                          <img src="./src/image/screenshot-web.png"  alt="time-tracking-dashboard"  >
-  
-                      </div>
-                  
-                      <h4 class="text-lg font-medium px-2">
-                        <a href='https://rest-countries-api-fadelun.vercel.app'>
-                        Time tracking dashboard 
-                      </a>
-                    </h4>
-                  
-                      <ul class="content h-1/6 flex flex-wrap  px-2 items-center space-x-2  overflow-auto text-sm">
-                          <li class="py-1 px-2  bg-orange-500 text-white  rounded-md md:rounded-sm">HTML</li>
-                          <li class="py-1 px-2  bg-blue-600 text-white rounded-md  md:rounded-sm" >CSS</li>
-                          <li class="py-1 px-2  bg-yellow-500 text-white rounded-md  md:rounded-sm">Javascript</li>
-                      </ul>
-                  
-              </div> 
-              <div class="card  max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8] ">
-                <div class="image-contain w-full h-4/6 overflow-hidden" >
-                    <img src="./src/image/screenshot-web 2.jpg"  alt="rest-countries-api"  >
-
-                </div>
-            
-                <h4 class="text-lg font-medium px-2">
-                  <a href='https://fadelun.github.io/time-tracking-dashboard'>
-                  Rest countries API
-                </a>
-              </h4>
-            
-                <ul class="content h-1/6 flex flex-wrap  px-2 items-center space-x-2  overflow-auto text-sm">
-                    <li class="py-1 px-2  bg-orange-500 text-white  rounded-md md:rounded-sm">HTML</li>
-                    <li class="py-1 px-2  bg-blue-600 text-white rounded-md  md:rounded-sm" >CSS</li>
-                    <li class="py-1 px-2  bg-yellow-500 text-white rounded-md  md:rounded-sm">Javascript</li>
-                </ul>
-            
-        </div> 
-        <div class="card  max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8] overflow-hidden">
-          <div class="image-contain w-full h-4/6 overflow-hidden" >
-              <img src="./src/image/screenshot-web 3.png"  alt="Pricing-component-with-toggle"  >
-
-          </div>
-      
-          <h4 class="text-lg font-medium px-2 ">
-            <a href='https://fadelun.github.io/Pricing-component-with-toggle'>
-              Pricing component with toggle
-          </a>
-        </h4>
-      
-          <ul class="content h-1/6 flex flex-wrap  px-2 items-center space-x-2  overflow-auto text-sm">
-              <li class="py-1 px-2  bg-orange-500 text-white  rounded-md md:rounded-sm">HTML</li>
-              <li class="py-1 px-2  bg-blue-600 text-white rounded-md  md:rounded-sm" >CSS</li>
-              <li class="py-1 px-2  bg-yellow-500 text-white rounded-md  md:rounded-sm">Javascript</li>
-          </ul>
-      
-  </div> 
-  <div class="card  max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]">
-    <div class="image-contain w-full h-auto overflow-hidden" >
-        <img src="./src/image/screenshot-web 4.png"  alt="tekken-7"  >
-
-    </div>
-
-    <h4 class="text-lg font-medium px-2">
-      <a href='https://fadelun.github.io/tekken-7'>
-        Tekken 7
-    </a>
-  </h4>
-
-    <ul class="content h-1/6 flex flex-wrap  px-2 items-center space-x-2  overflow-auto text-sm">
-        <li class="py-1 px-2  bg-orange-500 text-white  rounded-md md:rounded-sm">HTML</li>
-        <li class="py-1 px-2  bg-blue-600 text-white rounded-md  md:rounded-sm" >CSS</li>
-        <li class="py-1 px-2  bg-yellow-500 text-white rounded-md  md:rounded-sm">Javascript</li>
-    </ul>
-
-</div> 
-<div class="card  max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]">
-  <div class="image-contain w-full h-auto overflow-hidden" >
-      <img src="./src/image/screenshot-web 5.png"  alt="Math-for-kids"  >
-
-  </div>
-
-  <h4 class="text-lg font-medium px-2">
-    <a href='fadelun.github.io/math'>
-      Math for kids
-  </a>
-</h4>
-
-  <ul class="content h-1/6 flex flex-wrap  px-2 items-center space-x-2  overflow-auto text-sm">
-      <li class="py-1 px-2  bg-orange-500 text-white  rounded-md md:rounded-sm">HTML</li>
-      <li class="py-1 px-2  bg-blue-600 text-white rounded-md  md:rounded-sm" >CSS</li>
-      <li class="py-1 px-2  bg-yellow-500 text-white rounded-md  md:rounded-sm">Javascript</li>
-  </ul>
-
-</div>  
-
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
+          >
+            <div class="image-contain w-full h-4/6 overflow-hidden">
+              <img
+                src="./src/image/screenshot-web.png"
+                alt="time-tracking-dashboard"
+              />
             </div>
-        </div>
 
-        <!-- contacts -->
-        <div id="contacs" class="py-6 text-center px-36">
-          <h2 class="text-3xl font-semibold  uppercase mb-10">Get In Touch</h2>
-          <ul class="flex justify-center ">
-            <li class="mr-10"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ec8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
-            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ec8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
-          </ul>
+            <h4 class="text-lg font-medium px-2">
+              <a href="https://rest-countries-api-fadelun.vercel.app">
+                Time tracking dashboard
+              </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                HTML
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                CSS
+              </li>
+              <li
+                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+              >
+                Javascript
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
+          >
+            <div class="image-contain w-full h-4/6 overflow-hidden">
+              <img
+                src="./src/image/screenshot-web 2.jpg"
+                alt="rest-countries-api"
+              />
+            </div>
+
+            <h4 class="text-lg font-medium px-2">
+              <a href="https://fadelun.github.io/time-tracking-dashboard">
+                Rest countries API
+              </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                HTML
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                CSS
+              </li>
+              <li
+                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+              >
+                Javascript
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8] overflow-hidden"
+          >
+            <div class="image-contain w-full h-4/6 overflow-hidden">
+              <img
+                src="./src/image/screenshot-web 3.png"
+                alt="Pricing-component-with-toggle"
+              />
+            </div>
+
+            <h4 class="text-lg font-medium px-2">
+              <a href="https://fadelun.github.io/Pricing-component-with-toggle">
+                Pricing component with toggle
+              </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                HTML
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                CSS
+              </li>
+              <li
+                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+              >
+                Javascript
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
+          >
+            <div class="image-contain w-full h-auto overflow-hidden">
+              <img src="./src/image/screenshot-web 4.png" alt="tekken-7" />
+            </div>
+
+            <h4 class="text-lg font-medium px-2">
+              <a href="https://fadelun.github.io/tekken-7"> Tekken 7 </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                HTML
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                CSS
+              </li>
+              <li
+                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+              >
+                Javascript
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
+          >
+            <div class="image-contain w-full h-auto overflow-hidden">
+              <img src="./src/image/screenshot-web 5.png" alt="Math-for-kids" />
+            </div>
+
+            <h4 class="text-lg font-medium px-2">
+              <a href="https://fadelun.github.io/math/"> Math for kids </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                HTML
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                CSS
+              </li>
+              <li
+                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+              >
+                Javascript
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
+          >
+            <div class="image-contain w-full h-auto overflow-hidden">
+              <img src="./src/image/screenshot-web 6.png" alt="bikees" />
+            </div>
+
+            <h4 class="text-lg font-medium px-2">
+              <a href="bikees-psi.vercel.app" target="_blank">
+                Math for kids
+              </a>
+            </h4>
+
+            <ul
+              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
+            >
+              <li
+                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              >
+                React js
+              </li>
+              <li
+                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+              >
+                Tailwindcss
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      <!-- contacts -->
+      <div id="contacs" class="py-6 text-center px-36">
+        <h2 class="text-3xl font-semibold uppercase mb-10">Get In Touch</h2>
+        <ul class="flex justify-center">
+          <li class="mr-10">
+            <a href=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0ec8f8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-github"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path></svg
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0ec8f8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-instagram"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer class="bg-black">
       <div class="container mx-auto py-14 px-8 lg:px-36 text-white">
-        <p>© Created with love by <a href="https://www.instagram.com/fadelun_10/" class="font-semibold">Muhammad Fadll</a></p>
-
+        <p>
+          © Created with love by
+          <a href="https://www.instagram.com/fadelun_10/" class="font-semibold"
+            >Muhammad Fadll</a
+          >
+        </p>
       </div>
     </footer>
-</body>
+  </body>
 </html>
