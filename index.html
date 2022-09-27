@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,10 +87,10 @@
             <nav
               class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6"
             >
-              <a href="" class="block nav-link active font-medium">Home</a>
-              <a href="" class="block nav-link">About</a>
-              <a href="" class="block nav-link">Works</a>
-              <a href="" class="block nav-link">Contacts</a>
+              <a href="#" class="block nav-link active font-medium">Home</a>
+              <a href="#about" class="block nav-link">About</a>
+              <a href="#works" class="block nav-link">Works</a>
+              <a href="#contacts" class="block nav-link">Contacts</a>
             </nav>
           </div>
           <!-- button -->
@@ -110,7 +110,7 @@
           Muhammad Fadll
         </h1>
         <p
-          class="text-[2vw] lg:text-[28px] p-1 font-light uppercase tracking-[0.8rem]"
+          class="text-[4vw] lg:text-[28px] p-1 font-light uppercase tracking-normal md:tracking-[0.8rem]"
         >
           Ui / ux / Frontend
         </p>
@@ -130,7 +130,7 @@
         <div
           class="skill flex flex-col md:flex-row justify-around space-y-28 md:space-y-0 mt-28"
         >
-          <div class="skill-1 w-2/6">
+          <div class="skill-1 md:w-2/6">
             <h3 class="text-xl font-medium mb-5">UI / UX Design</h3>
             <ul class="text-gray-400 leading-7">
               <li>User Interface Design</li>
@@ -138,13 +138,13 @@
               <li>Wireframing</li>
             </ul>
           </div>
-          <div class="skill-2 w-2/6">
+          <div class="skill-2 md:w-2/6">
             <h3 class="text-xl font-medium mb-5">Frontend Development</h3>
             <ul class="text-gray-400 leading-7 flex justify-around flex-wrap">
               <!-- <a target="_blank" href="https://icons8.com/icon/20909/html-5">Html 5</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
               <!-- <a target="_blank" href="https://icons8.com/icon/21278/css3">CSS3</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
 
-              <li class="w-1/3 p-2">
+              <li class="w-44 mb-32 md:mb-0 md:w-1/3 p-2">
                 <svg
                   fill="none"
                   width="100%"
@@ -165,7 +165,7 @@
                   />
                 </svg>
               </li>
-              <li class="w-1/3 p-2">
+              <li class="w-44 mb-32 md:mb-0 md:w-1/3 p-2">
                 <svg
                   fill="none"
                   width="100%"
@@ -186,7 +186,7 @@
                   />
                 </svg>
               </li>
-              <li class="w-1/3 p-2">
+              <li class="w-44 mb-32 md:mb-0 md:w-1/3 p-2">
                 <svg
                   fill="none"
                   width="100%"
@@ -208,7 +208,7 @@
                   </g>
                 </svg>
               </li>
-              <li class="w-1/3 p-2">
+              <li class="w-44 mb-32 md:mb-0 md:w-1/3 p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
@@ -220,7 +220,7 @@
                   />
                 </svg>
               </li>
-              <li class="w-1/3 p-2">
+              <li class="w-44 mb-32 md:mb-0 md:w-1/3 p-2">
                 <svg
                   width="100%"
                   viewBox="0 0 512 407.864"
@@ -233,7 +233,7 @@
                   />
                 </svg>
               </li>
-              <li class="w-1/3 p-2">
+              <li class="w-44 md:w-1/3 p-2">
                 <svg
                   preserveAspectRatio="xMidYMid"
                   width="100%"
@@ -264,219 +264,206 @@
         </header>
         <!-- cards -->
         <div class="cards mt-12 grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
-          <!-- 
-                https://rest-countries-api-fadelun.vercel.app/
-                https://fadelun.github.io/time-tracking-dashboard
-                https://fadelun.github.io/Pricing-component-with-toggle/
-                https://fadelun.github.io/tekken-7
-                https://fadelun.github.io/Math/
-                https://fadelun.github.io/Sticky-notes
-
-               -->
-
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
           >
-            <div class="image-contain w-full h-4/6 overflow-hidden">
-              <img
-                src="./src/image/screenshot-web.png"
-                alt="time-tracking-dashboard"
-              />
-            </div>
+            <a href="https://fadelun.github.io/time-tracking-dashboard">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img
+                  src="./src/image/screenshot-web.png"
+                  alt="time-tracking-dashboard"
+                />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="https://rest-countries-api-fadelun.vercel.app">
-                Time tracking dashboard
-              </a>
-            </h4>
+              <h4 class="text-lg font-medium px-2">Time tracking dashboard</h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                HTML
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                CSS
-              </li>
-              <li
-                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
-              >
-                Javascript
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  HTML
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  CSS
+                </li>
+                <li
+                  class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+                >
+                  Javascript
+                </li>
+              </ul>
+            </a>
           </div>
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
           >
-            <div class="image-contain w-full h-4/6 overflow-hidden">
-              <img
-                src="./src/image/screenshot-web 2.jpg"
-                alt="rest-countries-api"
-              />
-            </div>
+            <a href="https://rest-countries-api-fadelun.vercel.app">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img
+                  src="./src/image/screenshot-web 2.jpg"
+                  alt="rest-countries-api"
+                />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="https://fadelun.github.io/time-tracking-dashboard">
-                Rest countries API
-              </a>
-            </h4>
+              <h4 class="text-lg font-medium px-2">Rest countries API</h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                HTML
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                CSS
-              </li>
-              <li
-                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
-              >
-                Javascript
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  HTML
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  CSS
+                </li>
+                <li
+                  class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+                >
+                  Javascript
+                </li>
+              </ul>
+            </a>
           </div>
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8] overflow-hidden"
           >
-            <div class="image-contain w-full h-4/6 overflow-hidden">
-              <img
-                src="./src/image/screenshot-web 3.png"
-                alt="Pricing-component-with-toggle"
-              />
-            </div>
+            <a href="https://fadelun.github.io/Pricing-component-with-toggle">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img
+                  src="./src/image/screenshot-web 3.png"
+                  alt="Pricing-component-with-toggle"
+                />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="https://fadelun.github.io/Pricing-component-with-toggle">
+              <h4 class="text-lg font-medium px-2">
                 Pricing component with toggle
-              </a>
-            </h4>
+              </h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                HTML
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                CSS
-              </li>
-              <li
-                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
-              >
-                Javascript
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  HTML
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  CSS
+                </li>
+                <li
+                  class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+                >
+                  Javascript
+                </li>
+              </ul>
+            </a>
           </div>
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
           >
-            <div class="image-contain w-full h-auto overflow-hidden">
-              <img src="./src/image/screenshot-web 4.png" alt="tekken-7" />
-            </div>
+            <a href="https://fadelun.github.io/tekken-7">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img src="./src/image/screenshot-web 4.png" alt="tekken-7" />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="https://fadelun.github.io/tekken-7"> Tekken 7 </a>
-            </h4>
+              <h4 class="text-lg font-medium px-2">Tekken 7</h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                HTML
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                CSS
-              </li>
-              <li
-                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
-              >
-                Javascript
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  HTML
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  CSS
+                </li>
+                <li
+                  class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+                >
+                  Javascript
+                </li>
+              </ul>
+            </a>
           </div>
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
           >
-            <div class="image-contain w-full h-auto overflow-hidden">
-              <img src="./src/image/screenshot-web 5.png" alt="Math-for-kids" />
-            </div>
+            <a href="https://fadelun.github.io/Math/">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img
+                  src="./src/image/screenshot-web 5.png"
+                  alt="Math-for-kids"
+                />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="https://fadelun.github.io/math/"> Math for kids </a>
-            </h4>
+              <h4 class="text-lg font-medium px-2">Math for kids</h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                HTML
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                CSS
-              </li>
-              <li
-                class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
-              >
-                Javascript
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  HTML
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  CSS
+                </li>
+                <li
+                  class="py-1 px-2 bg-yellow-500 text-white rounded-md md:rounded-sm"
+                >
+                  Javascript
+                </li>
+              </ul>
+            </a>
           </div>
           <div
             class="card max-h-[400px] min-h-[260px] border-2 border-black hover:border-[#0ec8f8]"
           >
-            <div class="image-contain w-full h-auto overflow-hidden">
-              <img src="./src/image/screenshot-web 6.png" alt="bikees" />
-            </div>
+            <a href="https://bikees-psi.vercel.app">
+              <div class="image-contain w-full h-4/6 overflow-hidden">
+                <img src="./src/image/screenshot-web 6.png" alt="bikees" />
+              </div>
 
-            <h4 class="text-lg font-medium px-2">
-              <a href="bikees-psi.vercel.app" target="_blank">
-                Math for kids
-              </a>
-            </h4>
+              <h4 class="text-lg font-medium px-2">Math for kids</h4>
 
-            <ul
-              class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
-            >
-              <li
-                class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+              <ul
+                class="content h-1/6 flex flex-wrap px-2 items-center space-x-2 overflow-auto text-sm"
               >
-                React js
-              </li>
-              <li
-                class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
-              >
-                Tailwindcss
-              </li>
-            </ul>
+                <li
+                  class="py-1 px-2 bg-orange-500 text-white rounded-md md:rounded-sm"
+                >
+                  React js
+                </li>
+                <li
+                  class="py-1 px-2 bg-blue-600 text-white rounded-md md:rounded-sm"
+                >
+                  Tailwindcss
+                </li>
+              </ul>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- contacts -->
-      <div id="contacs" class="py-6 text-center px-36">
+      <div id="contacts" class="py-6 text-center px-36">
         <h2 class="text-3xl font-semibold uppercase mb-10">Get In Touch</h2>
         <ul class="flex justify-center">
           <li class="mr-10">
