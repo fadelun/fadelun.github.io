@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       width: window.innerWidth,
+      repos: "",
       education: [
         {
           name: "freecodecamp",
@@ -59,7 +60,15 @@ export default {
       ],
     };
   },
-  methods() {},
+  created() {
+    fetch("https://api.github.com/users/fadelun/repos")
+      .then((response) => response.json())
+      .then((data) => {
+        this.repos = data;
+      });
+
+    console.log(this.repos);
+  },
 };
 </script>
 
@@ -89,108 +98,7 @@ h4 {
 #app {
   font-family: "Open Sans", sans-serif;
   background-color: $secondary;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-
-  //=========== header site ======================
-  header {
-    font-family: Oswald, sans-serif;
-    height: 100vh;
-    padding-top: 40px;
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      color: $white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5%;
-      // padding: 0 5.5rem; // size dekstop
-
-      .main-logo {
-        .img-logo {
-          width: 96px;
-        }
-      }
-
-      nav {
-        flex-basis: 40%;
-
-        ul {
-          display: flex;
-          justify-content: space-between;
-          list-style: none;
-
-          li {
-            a {
-              text-decoration: none;
-              color: $white;
-            }
-          }
-        }
-      }
-    }
-
-    nav.link-accounts {
-      position: fixed;
-      bottom: 1rem;
-      left: 20px;
-      background-color: orange;
-
-      li {
-        width: 20px;
-
-        svg {
-          width: 100%;
-        }
-      }
-    }
-
-    #banner {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .personal-intro {
-        font-size: 80px;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        color: $white;
-
-        .greeting {
-          line-height: 60px;
-        }
-
-        .main-name {
-          line-height: 70px;
-        }
-
-        .greeting,
-        .status {
-          text-transform: uppercase;
-          font-size: 0.4em;
-        }
-
-        .greeting {
-          color: $gray;
-        }
-
-        .status {
-          text-align: right;
-          color: $primary;
-          width: 30%;
-          align-self: flex-end;
-          line-height: 30px;
-        }
-      }
-    }
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

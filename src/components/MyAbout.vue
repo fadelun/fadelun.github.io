@@ -22,19 +22,19 @@
       <li>Visual Studio Code</li>
     </ul>
 
-    <h3>Education</h3>
-    <ul v-show="education">
+    <h3 class="education">Education</h3>
+    <ul v-show="education" class="educations">
       <li v-for="course in education" :key="course">
-        <p class="course">{{ course.name }}</p>
+        <h4 class="course">{{ course.name }}</h4>
         <p class="period">{{ course.period }}</p>
         <p class="info">{{ course.info }}</p>
       </li>
     </ul>
 
-    <h3>Languages</h3>
-    <ul v-show="languages">
+    <h3 class="languages">Languages</h3>
+    <ul v-show="languages" class="languages">
       <li v-for="language in languages" :key="language">
-        <p class="lang">{{ language.lang }}</p>
+        <h4 class="lang">{{ language.lang }}</h4>
         <p class="info">{{ language.info }}</p>
       </li>
     </ul>
@@ -54,9 +54,15 @@ main {
   padding: 260px 4vw 0;
 
   #about {
-    h2 {
+    h2,
+    h3 {
       color: $primary;
+    }
+    h2 {
       font-size: 4rem;
+    }
+    h3 {
+      font-size: 2rem;
     }
 
     p,
@@ -74,8 +80,9 @@ main {
     }
 
     .skill-list {
+      box-sizing: border-box;
       font-size: 1.2rem;
-      margin-top: 1.4rem;
+      margin: 1.4rem 0 4rem;
       width: 100%;
       height: 400px;
       display: flex;
@@ -84,6 +91,19 @@ main {
 
       li {
         margin-bottom: 40px;
+      }
+    }
+    ul.educations,
+    ul.languages {
+      margin: 3rem 0 82px;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 50px;
+        h4 {
+          font-size: 1.4rem;
+        }
       }
     }
   }

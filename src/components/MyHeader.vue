@@ -81,3 +81,70 @@ export default {
   props: ["widthWindow"],
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/assets/variable.scss";
+
+header {
+  font-family: Oswald, sans-serif;
+  height: 100vh;
+  padding-top: 40px;
+
+  nav.link-accounts {
+    position: fixed;
+    bottom: 1rem;
+    left: 20px;
+    background-color: orange;
+
+    li {
+      width: 20px;
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+
+  #banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .personal-intro {
+      font-size: 80px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      color: $white;
+
+      .greeting {
+        line-height: 60px;
+      }
+
+      .main-name {
+        line-height: 70px;
+      }
+
+      .greeting,
+      .status {
+        text-transform: uppercase;
+        font-size: 0.4em;
+      }
+
+      .greeting {
+        color: $gray;
+      }
+
+      .status {
+        text-align: right;
+        color: $primary;
+        width: 30%;
+        align-self: flex-end;
+        line-height: 30px;
+      }
+    }
+  }
+}
+</style>
