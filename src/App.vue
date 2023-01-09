@@ -64,25 +64,25 @@ export default {
       showcase: [
         {
           name: "Time tracking dashboard",
-          image: "screenshot-web.png",
+          image: require("@/assets/resource/screenshot-web.png"),
           source: "https://fadelun.github.io/time-tracking-dashboard",
           tag: ["React js", "Tailwind"],
         },
         {
           name: "Rest countries API",
-          image: "screenshot-web 2.jpg",
+          image: require("@/assets/resource/screenshot-web 2.jpg"),
           source: "https://rest-countries-api-fadelun.vercel.app/",
           tag: ["React js", "Tailwind", "Rest API"],
         },
         {
           name: " Pricing component with toggle",
-          image: "screenshot-web 3.png",
+          image: require("@/assets/resource/screenshot-web 3.png"),
           source: "https://fadelun.github.io/Pricing-component-with-toggle ",
           tag: ["HTML5 ", "Tailwind"],
         },
         {
           name: " bikees ",
-          image: "screenshot-web 6.png",
+          image: require("@/assets/resource/screenshot-web 6.png"),
           source: "https://bikees-psi.vercel.app/",
           tag: ["React js ", "Tailwind"],
         },
