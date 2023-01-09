@@ -89,6 +89,7 @@ export default {
       ],
     };
   },
+
   // created() {
   //   fetch("https://api.github.com/users/fadelun/repos")
   //     .then((response) => response.json())
@@ -96,7 +97,7 @@ export default {
   //       this.repos = data;
   //     });
 
-  //   console.log(this.repos);
+  // console.log(this.repos);
   // },
 };
 </script>
