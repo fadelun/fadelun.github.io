@@ -130,5 +130,9 @@ h4 {
   background-color: $secondary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  main {
+    padding: 260px 4vw 0;
+  }
 }
 </style>

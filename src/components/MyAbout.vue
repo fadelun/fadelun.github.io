@@ -50,60 +50,57 @@ export default {
 <style lang="scss">
 @import "@/assets/variable.scss";
 
-main {
-  padding: 260px 4vw 0;
+#about {
+  margin-bottom: 10rem;
+  h2,
+  h3 {
+    color: $primary;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
 
-  #about {
-    h2,
-    h3 {
-      color: $primary;
-    }
-    h2 {
-      font-size: 4rem;
-    }
-    h3 {
-      font-size: 2rem;
-    }
+  p,
+  li {
+    color: $white;
+  }
+  .description {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
 
-    p,
+  .skill {
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+
+  .skill-list {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin: 1.4rem 0 4rem;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
     li {
-      color: $white;
+      margin-bottom: 40px;
     }
-    .description {
-      font-size: 1.6rem;
-      font-weight: 300;
-    }
-
-    .skill {
-      margin-top: 2rem;
-      font-weight: 600;
-    }
-
-    .skill-list {
-      box-sizing: border-box;
-      font-size: 1.2rem;
-      margin: 1.4rem 0 4rem;
-      width: 100%;
-      height: 400px;
+  }
+  ul.educations,
+  ul.languages {
+    margin: 3rem 0 82px;
+    li {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
-
-      li {
-        margin-bottom: 40px;
-      }
-    }
-    ul.educations,
-    ul.languages {
-      margin: 3rem 0 82px;
-      li {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: 50px;
-        h4 {
-          font-size: 1.4rem;
-        }
+      gap: 1rem;
+      margin-bottom: 50px;
+      h4 {
+        font-size: 1.4rem;
       }
     }
   }
