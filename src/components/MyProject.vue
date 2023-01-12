@@ -31,7 +31,7 @@ export default {
 @import "@/assets/variable.scss";
 
 #my-project {
-  // background: #43fd43;
+  margin-bottom: 10rem;
   h2,
   h3 {
     color: $primary;

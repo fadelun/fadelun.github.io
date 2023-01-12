@@ -5,14 +5,18 @@
   <main>
     <MyAbout :education="education" :languages="languages" />
     <MyProject :showcase="showcase" />
+    <MyContact />
   </main>
-  <footer></footer>
+  <footer>
+    <p>Built by Muhammad ©2023</p>
+  </footer>
 </template>
 
 <script>
 import MyHeader from "./components/MyHeader.vue";
 import MyAbout from "./components/MyAbout.vue";
 import MyProject from "./components/MyProject.vue";
+import MyContact from "./components/MyContact.vue";
 
 export default {
   name: "App",
@@ -20,6 +24,7 @@ export default {
     MyHeader,
     MyAbout,
     MyProject,
+    MyContact,
   },
   data() {
     return {
@@ -128,11 +133,19 @@ h4 {
 #app {
   font-family: "Open Sans", sans-serif;
   background-color: $secondary;
+  color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   main {
     padding: 260px 4vw 0;
+  }
+
+  footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
   }
 }
 </style>
