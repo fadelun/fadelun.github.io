@@ -1,7 +1,8 @@
 <template>
   <!-- portfolio vue x scss -->
 
-  <MyHeader :widthWindow="width" />
+  <MyHeader />
+
   <main>
     <MyAbout :education="education" :languages="languages" />
     <MyProject :showcase="showcase" />
@@ -28,7 +29,6 @@ export default {
   },
   data() {
     return {
-      width: window.innerWidth,
       repos: "",
       education: [
         {
@@ -94,16 +94,6 @@ export default {
       ],
     };
   },
-
-  // created() {
-  //   fetch("https://api.github.com/users/fadelun/repos")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.repos = data;
-  //     });
-
-  // console.log(this.repos);
-  // },
 };
 </script>
 
@@ -117,6 +107,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 li {

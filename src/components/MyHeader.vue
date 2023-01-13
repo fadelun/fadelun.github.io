@@ -2,7 +2,7 @@
   <header>
     <MyNavbar />
 
-    <nav v-show="widthWindow > 740" class="link-accounts">
+    <nav class="link-accounts">
       <!-- github, instagram, codepen -->
       <li>
         <a
@@ -78,7 +78,6 @@ export default {
   components: {
     MyNavbar,
   },
-  props: ["widthWindow"],
 };
 </script>
 
@@ -91,18 +90,7 @@ header {
   padding-top: 40px;
 
   nav.link-accounts {
-    position: fixed;
-    bottom: 1rem;
-    left: 20px;
-    background-color: orange;
-
-    li {
-      width: 20px;
-
-      svg {
-        width: 100%;
-      }
-    }
+    display: none;
   }
 
   #banner {
@@ -143,6 +131,24 @@ header {
         width: 30%;
         align-self: flex-end;
         line-height: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    nav.link-accounts {
+      display: block;
+      position: fixed;
+      bottom: 1rem;
+      left: 20px;
+      background-color: orange;
+
+      li {
+        width: 20px;
+
+        svg {
+          width: 100%;
+        }
       }
     }
   }

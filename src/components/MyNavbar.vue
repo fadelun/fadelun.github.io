@@ -7,12 +7,12 @@
         alt="FADLL - logo"
       />
     </div>
-    <nav>
+    <nav @click="movePage">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Project</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#my-project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -20,6 +20,11 @@
 <script>
 export default {
   name: "MyNavbar",
+  methods: {
+    movePage() {
+      console.log(this);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -36,6 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+
     // padding: 0 5.5rem; // size dekstop
 
     .main-logo {
