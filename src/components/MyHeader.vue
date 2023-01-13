@@ -5,7 +5,7 @@
     <nav class="link-accounts">
       <!-- github, instagram, codepen -->
       <li>
-        <a
+        <a href="#"
           ><svg
             width="80"
             height="80"
@@ -21,7 +21,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="#">
           <svg
             width="80"
             height="80"
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="#">
           <svg
             width="80"
             height="80"
@@ -139,15 +139,21 @@ header {
     nav.link-accounts {
       display: block;
       position: fixed;
-      bottom: 1rem;
-      left: 20px;
-      background-color: orange;
+      bottom: 2rem;
+      left: 36px;
+      height: 200px;
 
       li {
-        width: 20px;
+        width: 24px;
+        height: 30%;
 
         svg {
           width: 100%;
+          opacity: 0.4;
+
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }

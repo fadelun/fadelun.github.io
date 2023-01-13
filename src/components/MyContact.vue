@@ -135,19 +135,6 @@ export default {
 
     .my-contact {
       width: 40px;
-
-      a svg {
-        width: 100%;
-        filter: invert(94%) sepia(82%) saturate(0%) hue-rotate(207deg)
-          brightness(103%) contrast(103%);
-        // cara memberi warna pada svg dengan filter
-        //https://codepen.io/sosuke/pen/Pjoqqp untuk meng-convert warna menjadi filter
-
-        &:hover {
-          filter: invert(43%) sepia(95%) saturate(2682%) hue-rotate(199deg)
-            brightness(97%) contrast(91%);
-        }
-      }
     }
   }
 }
