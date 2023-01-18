@@ -22,7 +22,10 @@ export default {
   name: "MyNavbar",
   methods: {
     movePage() {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
+
+      window.scrollY;
+      // console.log(window);
     },
   },
 };
@@ -62,6 +65,29 @@ header {
           a {
             text-decoration: none;
             color: $white;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              background-color: $primary;
+              height: 2px;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              transform: scaleX(0);
+              transform-origin: right bottom;
+              transition: transform 0.3s ease;
+            }
+
+            &:hover {
+              color: $primary;
+
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left bottom;
+              }
+            }
           }
         }
       }
