@@ -44,7 +44,7 @@ export default {
   }
   .showcase-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
     margin-top: 2rem;
@@ -102,20 +102,25 @@ export default {
 @media (min-width: 1024px) {
   #my-project {
     .showcase-menu {
+      gap: 2rem;
+
       .project {
         width: 30%;
+        // height: 500px;
 
         .image-contain {
-          min-height: 250px;
+          min-height: 150px;
+          max-height: 60%;
         }
 
         .project-description {
           padding: 1rem 20px;
-          max-height: 260px;
+          max-height: 200px;
+          height: 40%;
 
           .text {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
+            margin-bottom: 1.8rem;
+            font-size: 1rem;
           }
         }
       }

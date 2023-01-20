@@ -78,6 +78,7 @@ export default {
   components: {
     MyNavbar,
   },
+  setup() {},
 };
 </script>
 
@@ -109,6 +110,7 @@ header {
 
       .greeting {
         line-height: 60px;
+        font-weight: 500;
       }
 
       .main-name {

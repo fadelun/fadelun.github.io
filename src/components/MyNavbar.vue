@@ -22,10 +22,7 @@ export default {
   name: "MyNavbar",
   methods: {
     movePage() {
-      // console.log(window.scrollY);
-
       window.scrollY;
-      // console.log(window);
     },
   },
 };

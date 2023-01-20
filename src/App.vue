@@ -103,6 +103,27 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
 @import "@/assets/variable.scss";
 
+html {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $secondary;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #474950;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #34363b;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
