@@ -89,7 +89,19 @@ export default {
           name: " bikees ",
           image: require("@/assets/resource/screenshot-web 6.png"),
           source: "https://bikees-psi.vercel.app/",
-          tag: ["React js ", "Tailwind"],
+          tag: ["React js ", "Tailwind", "Carousel"],
+        },
+        {
+          name: " EA-Need for speed ",
+          image: require("@/assets/resource/screenshot-web 6.png"),
+          source: "https://ea-nfs-clone.vercel.app/",
+          tag: ["Vue js ", "Tailwind", "Landing page"],
+        },
+        {
+          name: " todoApp ",
+          image: require("@/assets/resource/screenshot-web 6.png"),
+          source: "https://https://fadelun.github.io/appTodo/",
+          tag: ["Vue js ", "Tailwind"],
         },
       ],
     };
