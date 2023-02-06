@@ -78,5 +78,8 @@ export default {
 main {
   width: 86vw;
   margin: 180px auto 0;
+  @media (min-width: 1024px) {
+    width: 1100px;
+  }
 }
 </style>

@@ -46,25 +46,30 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 3rem;
     margin-top: 2rem;
 
     .project {
       width: 100%;
+      display: flex;
+      flex-direction: column;
 
       background-color: $dark-gray;
 
       .image-contain {
         min-width: 100%;
-        min-height: 300px;
-        max-height: 60%;
         overflow: hidden;
+
+        img.project-image {
+          width: 100%;
+        }
       }
 
       .project-description {
         color: $white;
+        display: flex;
+        flex-wrap: wrap;
         padding: 2.4rem 20px;
-        max-height: 400px;
         overflow: auto;
 
         &::-webkit-scrollbar {
@@ -79,13 +84,16 @@ export default {
           margin-bottom: 2rem;
           font-size: 1.4rem;
         }
-
-        .project-meta-stack p {
-          display: inline;
-          color: $primary;
-          font-weight: 500;
-          font-size: 1.2rem;
-          margin: 0 4px 0;
+        .project-meta-stack {
+          display: flex;
+          flex-wrap: wrap;
+          p {
+            display: inline;
+            color: $primary;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin: 0 4px 0;
+          }
         }
       }
 
@@ -102,24 +110,27 @@ export default {
 @media (min-width: 1024px) {
   #my-project {
     .showcase-menu {
-      gap: 2rem;
-
+      gap: 2.4rem;
       .project {
         width: 30%;
-        // height: 500px;
+        max-height: 400px;
 
         .image-contain {
-          min-height: 150px;
-          max-height: 60%;
+          min-height: 160px;
+
+          img.project-image {
+            width: 100%;
+            height: auto;
+          }
         }
 
         .project-description {
-          padding: 1rem 20px;
-          max-height: 200px;
-          height: 40%;
-
+          padding: 1.2rem;
           .text {
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.4rem;
+            font-size: 0.8rem;
+          }
+          .project-meta-stack p {
             font-size: 1rem;
           }
         }
