@@ -41,6 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    z-index: 999;
 
     // padding: 0 5.5rem; // size dekstop
 

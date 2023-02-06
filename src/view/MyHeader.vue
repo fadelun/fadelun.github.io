@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import MyNavbar from "./MyNavbar.vue";
+import MyNavbar from "../components/MyNavbar.vue";
 
 export default {
   name: "MyHeader",

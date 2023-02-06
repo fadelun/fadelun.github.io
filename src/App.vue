@@ -2,108 +2,26 @@
   <!-- portfolio vue x scss -->
 
   <MyHeader />
+  <MyMain />
 
-  <main>
-    <MyAbout :education="education" :languages="languages" />
-    <MyProject :showcase="showcase" />
-    <MyContact />
-  </main>
   <footer>
     <p>Built by Muhammad ©2023</p>
   </footer>
 </template>
 
 <script>
-import MyHeader from "./components/MyHeader.vue";
-import MyAbout from "./components/MyAbout.vue";
-import MyProject from "./components/MyProject.vue";
-import MyContact from "./components/MyContact.vue";
+import MyHeader from "./view/MyHeader.vue";
+import MyMain from "./view/MyMain.vue";
 
 export default {
   name: "App",
   components: {
     MyHeader,
-    MyAbout,
-    MyProject,
-    MyContact,
+    MyMain,
   },
   data() {
     return {
       repos: "",
-      education: [
-        {
-          name: "freecodecamp",
-          period: "2021",
-          info: "JavaScript Algorithms and Data Structures",
-        },
-        {
-          name: "Skilvul",
-          period: "2021",
-          info: "Javascript dasar",
-        },
-        {
-          name: "Progate",
-          period: "2021",
-          info: "dasar-dasar Sass dan git",
-        },
-        {
-          name: "BuildWith Angga",
-          period: "2020",
-          info: "Full stack web designer",
-        },
-      ],
-      languages: [
-        {
-          lang: "Indonesia",
-          info: "Native languages",
-        },
-        {
-          lang: "Indonesia",
-          info: "intermediate",
-        },
-        {
-          lang: "English",
-          info: "Basic",
-        },
-      ],
-      showcase: [
-        {
-          name: "Time tracking dashboard",
-          image: require("@/assets/resource/screenshot-web.png"),
-          source: "https://fadelun.github.io/time-tracking-dashboard",
-          tag: ["React js", "Tailwind"],
-        },
-        {
-          name: "Rest countries API",
-          image: require("@/assets/resource/screenshot-web 2.jpg"),
-          source: "https://rest-countries-api-fadelun.vercel.app/",
-          tag: ["React js", "Tailwind", "Rest API"],
-        },
-        {
-          name: " Pricing component with toggle",
-          image: require("@/assets/resource/screenshot-web 3.png"),
-          source: "https://fadelun.github.io/Pricing-component-with-toggle ",
-          tag: ["HTML5 ", "Tailwind"],
-        },
-        {
-          name: " bikees ",
-          image: require("@/assets/resource/screenshot-web 6.png"),
-          source: "https://bikees-psi.vercel.app/",
-          tag: ["React js ", "Tailwind", "Carousel"],
-        },
-        {
-          name: " EA-Need for speed ",
-          image: require("@/assets/resource/screenshot-web 6.png"),
-          source: "https://ea-nfs-clone.vercel.app/",
-          tag: ["Vue js ", "Tailwind", "Landing page"],
-        },
-        {
-          name: " todoApp ",
-          image: require("@/assets/resource/screenshot-web 6.png"),
-          source: "https://https://fadelun.github.io/appTodo/",
-          tag: ["Vue js ", "Tailwind"],
-        },
-      ],
     };
   },
 };
@@ -173,11 +91,6 @@ h4 {
   color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  main {
-    width: 86vw;
-    margin: 180px auto 0;
-  }
 
   footer {
     height: 80px;
