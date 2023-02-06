@@ -22,28 +22,53 @@
       <li>Visual Studio Code</li>
     </ul>
 
-    <h3 class="education">Education</h3>
-    <ul v-show="education" class="educations">
-      <li v-for="course in education" :key="course">
-        <h4 class="course">{{ course.name }}</h4>
-        <p class="period">{{ course.period }}</p>
-        <p class="info">{{ course.info }}</p>
-      </li>
-    </ul>
-
-    <h3 class="languages">Languages</h3>
-    <ul v-show="languages" class="languages">
-      <li v-for="language in languages" :key="language">
-        <h4 class="lang">{{ language.lang }}</h4>
-        <p class="info">{{ language.info }}</p>
-      </li>
-    </ul>
+    <a href="#" class="button btn">See more</a>
   </article>
 </template>
 <script>
 export default {
   name: "MyAbout",
-  props: ["education", "languages"],
+
+  data() {
+    return {
+      education: [
+        {
+          name: "freecodecamp",
+          period: "2021",
+          info: "JavaScript Algorithms and Data Structures",
+        },
+        {
+          name: "Skilvul",
+          period: "2021",
+          info: "Javascript dasar",
+        },
+        {
+          name: "Progate",
+          period: "2021",
+          info: "dasar-dasar Sass dan git",
+        },
+        {
+          name: "BuildWith Angga",
+          period: "2020",
+          info: "Full stack web designer",
+        },
+      ],
+      languages: [
+        {
+          lang: "Indonesia",
+          info: "Native languages",
+        },
+        {
+          lang: "Indonesia",
+          info: "intermediate",
+        },
+        {
+          lang: "English",
+          info: "Basic",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -80,7 +105,7 @@ export default {
   .skill-list {
     box-sizing: border-box;
     font-size: 1.2rem;
-    margin: 1.4rem 0 4rem;
+    margin: 1.2rem 0;
     width: 100%;
     height: 400px;
     display: flex;
@@ -91,17 +116,40 @@ export default {
       margin-bottom: 40px;
     }
   }
-  ul.educations,
-  ul.languages {
-    margin: 3rem 0 82px;
-    li {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-bottom: 50px;
-      h4 {
-        font-size: 1.4rem;
-      }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: $white;
+    border: 3px solid $primary;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
     }
   }
 }
