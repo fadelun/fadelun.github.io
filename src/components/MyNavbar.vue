@@ -7,7 +7,7 @@
         alt="FADLL - logo"
       />
     </div>
-    <nav @click="movePage">
+    <nav class="navbar-header" @click="movePage">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -18,8 +18,21 @@
   </div>
 </template>
 <script>
+import anime from "animejs";
+
 export default {
   name: "MyNavbar",
+  mounted() {
+    anime({
+      targets: ".navbar-header li",
+      translateY: ["1.1rem", 0],
+      duration: 2000,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      delay: anime.stagger(100, { start: 3000 }),
+    });
+  },
+
   methods: {
     movePage() {
       window.scrollY;

@@ -2,13 +2,11 @@
   <header>
     <MyNavbar />
 
-    <nav class="link-accounts">
+    <nav class="navbar-left link-accounts">
       <!-- github, instagram, codepen -->
       <li>
         <a href="#"
           ><svg
-            width="80"
-            height="80"
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +21,6 @@
       <li>
         <a href="#">
           <svg
-            width="80"
-            height="80"
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +35,6 @@
       <li>
         <a href="#">
           <svg
-            width="80"
-            height="80"
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +65,7 @@
 </template>
 
 <script>
+import anime from "animejs";
 import MyNavbar from "../components/MyNavbar.vue";
 
 export default {
@@ -78,7 +73,42 @@ export default {
   components: {
     MyNavbar,
   },
-  setup() {},
+  mounted() {
+    // animasi pada teks nama
+    anime({
+      targets: "span.greeting",
+      translateY: [-200, 0],
+      opacity: [0, 1],
+      duration: 2000,
+      delay: 1000,
+      easing: "easeInOutCubic",
+    });
+    anime({
+      targets: "span.main-name",
+      translateX: [-300, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      delay: 750,
+      easing: "easeInOutCubic",
+    });
+    anime({
+      targets: "span.status",
+      translateX: [300, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      delay: 750,
+      easing: "easeInOutCubic",
+    });
+
+    // navbar samping
+    anime({
+      targets: ".navbar-left svg",
+      translateX: ["3rem", 0],
+      duration: 1000,
+      opacity: [0, ".4"],
+      delay: anime.stagger(100, { start: 4000 }),
+    });
+  },
 };
 </script>
 
@@ -139,7 +169,10 @@ header {
 
   @media (min-width: 1024px) {
     nav.link-accounts {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 24px;
       position: fixed;
       bottom: 2rem;
       left: 36px;
@@ -147,7 +180,7 @@ header {
 
       li {
         width: 24px;
-        height: 30%;
+        // height: 30%;
 
         svg {
           width: 100%;
