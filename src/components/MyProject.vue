@@ -4,14 +4,22 @@
     <ul v-show="showcase" class="showcase-menu">
       <li v-for="project in showcase" :key="project" class="project">
         <div class="image-contain">
-          <img :src="project.image" :alt="project.name" class="project-image" />
+          <a :href="project.source">
+            <img
+              :src="project.image"
+              :alt="project.name"
+              class="project-image"
+            />
+          </a>
         </div>
         <div class="project-description">
-          <h4 class="project-name">{{ project.name }}</h4>
+          <h4 class="project-name">
+            <a :href="project.source">
+              {{ project.name }}
+            </a>
+          </h4>
           <p class="text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            impedit fuga minima distinctio voluptas. Dolorum omnis ex iure
-            sapiente natus quam consequatur laudantium expedita repellendus.
+            {{ project.desc }}
           </p>
           <div class="project-meta-stack">
             <p v-for="tag in project.tag" :key="tag">&lt; {{ tag }} /></p>
@@ -76,6 +84,11 @@ export default {
           opacity: 0;
         }
 
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
         .project-name {
           margin-bottom: 1rem;
         }
@@ -128,10 +141,10 @@ export default {
           padding: 1.2rem;
           .text {
             margin-bottom: 1.4rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
           }
           .project-meta-stack p {
-            font-size: 1rem;
+            font-size: 0.8rem;
           }
         }
       }
