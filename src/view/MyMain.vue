@@ -1,7 +1,7 @@
 <template>
   <main>
     <MyAbout />
-    <MyProject :showcase="showcase" />
+    <MyProject :showcase="showcase" :scrollValue="scrollValue" />
     <MyContact />
   </main>
 </template>
@@ -17,6 +17,8 @@ export default {
     MyProject,
     MyContact,
   },
+  props: ["scrollValue"],
+
   data() {
     return {
       showcase: [

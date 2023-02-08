@@ -2,7 +2,7 @@
   <!-- portfolio vue x scss -->
 
   <MyHeader />
-  <MyMain />
+  <MyMain :scrollValue="scrollValue" />
 
   <footer>
     <p>Built by Muhammad ©2023</p>
@@ -21,8 +21,18 @@ export default {
   },
   data() {
     return {
-      repos: "",
+      scrollValue: 0,
     };
+  },
+  created() {
+    window.addEventListener("scroll", this.scroll);
+  },
+  methods: {
+    scroll() {
+      this.scrollValue = window.pageYOffset;
+      // console.log(this.scrollValue);
+      return this.scrollValue;
+    },
   },
 };
 </script>
