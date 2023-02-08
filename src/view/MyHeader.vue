@@ -1,6 +1,9 @@
 <template>
   <header>
     <MyNavbar />
+    <!-- <p style="color: white; position: fixed; top: 1rem; left: 2rem">
+      
+    </p> -->
 
     <nav class="navbar-left link-accounts">
       <!-- github, instagram, codepen -->
@@ -73,6 +76,7 @@ export default {
   components: {
     MyNavbar,
   },
+
   mounted() {
     // animasi pada teks nama
     anime({
