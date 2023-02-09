@@ -41,7 +41,7 @@ export default {
 
   mounted() {
     // const target = document.querySelector(".showcase-menu");
-    const allTarget = document.getElementsByClassName(".showcase project");
+    const allTarget = document.querySelectorAll(".showcase-menu .project");
 
     // const animation = anime({
     //   targets: target,
@@ -61,13 +61,15 @@ export default {
         duration: 740,
         autoplay: false,
         easing: "easeInOutCubic",
-        delay: anime.stagger(100),
+        // delay: anime.stagger(100),
+        delay: 100,
       });
+      // console.log(target, i);
       const playAnimation = () => {
         const targetPosition =
           target.getBoundingClientRect().top + window.pageYOffset;
 
-        const windowPosition = this.scrollValue + 40;
+        const windowPosition = this.scrollValue + 400;
         console.log("posisi target: " + targetPosition);
         console.log(this.scrollValue);
 

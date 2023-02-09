@@ -1,11 +1,13 @@
 <template>
   <div class="navbar">
     <div class="main-logo">
-      <img
-        class="img-logo"
-        src="../assets/resource/LOGO.svg"
-        alt="FADLL - logo"
-      />
+      <a href="#">
+        <img
+          class="img-logo"
+          src="../assets/resource/LOGO.svg"
+          alt="FADLL - logo"
+        />
+      </a>
     </div>
     <nav class="navbar-header" @click="movePage">
       <ul>
@@ -24,8 +26,16 @@ export default {
   name: "MyNavbar",
   mounted() {
     anime({
+      targets: ".main-logo",
+      translateY: ["1.4rem", 0],
+      duration: 2000,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      delay: 3000,
+    });
+    anime({
       targets: ".navbar-header li",
-      translateY: ["1.1rem", 0],
+      translateY: ["1.4rem", 0],
       duration: 2000,
       opacity: [0, 1],
       easing: "easeOutExpo",
