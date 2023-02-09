@@ -30,9 +30,74 @@
   </article>
 </template>
 <script>
+import anime from "animejs";
+
 export default {
   name: "MyProject",
-  props: ["showcase"],
+  props: ["showcase", "scrollValue"],
+  // created() {
+  //   window.addEventListener("scroll", this.playAnimation);
+  // },
+
+  mounted() {
+    // const target = document.querySelector(".showcase-menu");
+    const allTarget = document.getElementsByClassName(".showcase project");
+
+    // const animation = anime({
+    //   targets: target,
+    //   translateY: [-200, 0],
+    //   opacity: [0, 1],
+    //   duration: 740,
+    //   autoplay: false,
+    //   easing: "easeInOutCubic",
+    //   delay: anime.stagger(100),
+    // });
+    // console.log(target);
+    [...allTarget].forEach((target) => {
+      const animation = anime({
+        targets: target,
+        translateY: [-200, 0],
+        opacity: [0, 1],
+        duration: 740,
+        autoplay: false,
+        easing: "easeInOutCubic",
+        delay: anime.stagger(100),
+      });
+      const playAnimation = () => {
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset;
+
+        const windowPosition = this.scrollValue + 40;
+        console.log("posisi target: " + targetPosition);
+        console.log(this.scrollValue);
+
+        if (windowPosition > targetPosition) {
+          animation.play();
+          window.removeEventListener("scroll", playAnimation);
+        }
+      };
+      window.addEventListener("scroll", playAnimation);
+    });
+    // console.log(target);
+
+    // membuat fungsi untuk men-trigger jika posisi window(this.scrollValue)  jaraknya lebih rendah
+    // dari posisi target("getBoundingClientRect().top")
+    // maka animation nya berjalan
+    // const playAnimation = () => {
+    //   const targetPosition =
+    //     target.getBoundingClientRect().top + window.pageYOffset;
+
+    //   const windowPosition = this.scrollValue + 40;
+    //   console.log("posisi target: " + targetPosition);
+    //   console.log(this.scrollValue);
+
+    //   if (windowPosition > targetPosition) {
+    //     animation.play();
+    //     window.removeEventListener("scroll", playAnimation);
+    //   }
+    // };
+    // window.addEventListener("scroll", playAnimation);
+  },
 };
 </script>
 <style lang="scss" scoped>
