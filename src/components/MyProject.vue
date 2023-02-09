@@ -35,43 +35,29 @@ import anime from "animejs";
 export default {
   name: "MyProject",
   props: ["showcase", "scrollValue"],
-  // created() {
-  //   window.addEventListener("scroll", this.playAnimation);
-  // },
 
   mounted() {
-    // const target = document.querySelector(".showcase-menu");
     const allTarget = document.querySelectorAll(".showcase-menu .project");
 
-    // const animation = anime({
-    //   targets: target,
-    //   translateY: [-200, 0],
-    //   opacity: [0, 1],
-    //   duration: 740,
-    //   autoplay: false,
-    //   easing: "easeInOutCubic",
-    //   delay: anime.stagger(100),
-    // });
-    // console.log(target);
     [...allTarget].forEach((target) => {
       const animation = anime({
         targets: target,
-        translateY: [-200, 0],
+        translateY: [300, 0],
         opacity: [0, 1],
         duration: 740,
         autoplay: false,
         easing: "easeInOutCubic",
-        // delay: anime.stagger(100),
+
         delay: 100,
       });
-      // console.log(target, i);
+
       const playAnimation = () => {
         const targetPosition =
           target.getBoundingClientRect().top + window.pageYOffset;
 
-        const windowPosition = this.scrollValue + 400;
-        console.log("posisi target: " + targetPosition);
-        console.log(this.scrollValue);
+        const windowPosition = this.scrollValue + window.innerHeight - 50;
+        // console.log("posisi target: " + targetPosition);
+        // console.log(this.scrollValue);
 
         if (windowPosition > targetPosition) {
           animation.play();
@@ -80,25 +66,6 @@ export default {
       };
       window.addEventListener("scroll", playAnimation);
     });
-    // console.log(target);
-
-    // membuat fungsi untuk men-trigger jika posisi window(this.scrollValue)  jaraknya lebih rendah
-    // dari posisi target("getBoundingClientRect().top")
-    // maka animation nya berjalan
-    // const playAnimation = () => {
-    //   const targetPosition =
-    //     target.getBoundingClientRect().top + window.pageYOffset;
-
-    //   const windowPosition = this.scrollValue + 40;
-    //   console.log("posisi target: " + targetPosition);
-    //   console.log(this.scrollValue);
-
-    //   if (windowPosition > targetPosition) {
-    //     animation.play();
-    //     window.removeEventListener("scroll", playAnimation);
-    //   }
-    // };
-    // window.addEventListener("scroll", playAnimation);
   },
 };
 </script>

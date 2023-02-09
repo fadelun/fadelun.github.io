@@ -2,7 +2,7 @@
   <main>
     <MyAbout />
     <MyProject :showcase="showcase" :scrollValue="scrollValue" />
-    <MyContact />
+    <MyContact :scrollValue="scrollValue" />
   </main>
 </template>
 <script>

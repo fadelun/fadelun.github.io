@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <h2>My Contact</h2>
-    <h4 class="text">Hire me</h4>
+    <h4 class="text">Connect with me</h4>
     <ul class="contact-container">
       <li class="my-contact">
         <a href="">
@@ -104,8 +104,37 @@
   </div>
 </template>
 <script>
+import anime from "animejs";
+
 export default {
   name: "MyContact",
+  props: ["scrollValue"],
+  mounted() {
+    const target = document.querySelectorAll(".contact-container li");
+    const animation = anime({
+      targets: target,
+      translateY: [-200, 0],
+      opacity: [0, 1],
+      duration: 1800,
+
+      delay: anime.stagger(100, { from: "center", start: 500 }),
+      autoplay: false,
+    });
+    const playAnimation = () => {
+      const targetPosition =
+        target[0].getBoundingClientRect().top + window.pageYOffset;
+
+      const windowPosition = this.scrollValue + window.innerHeight;
+      console.log("posisi target: " + targetPosition);
+      console.log(this.scrollValue);
+
+      if (windowPosition > targetPosition) {
+        animation.play();
+        window.removeEventListener("scroll", playAnimation);
+      }
+    };
+    window.addEventListener("scroll", playAnimation);
+  },
 };
 </script>
 <style lang="scss">
@@ -130,7 +159,6 @@ export default {
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
-    overflow: hidden;
     width: 100%;
 
     .my-contact {
