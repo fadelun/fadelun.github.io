@@ -55,11 +55,11 @@
       </li>
     </nav>
     <div id="banner">
-      <p class="personal-intro">
+      <h1 class="personal-intro">
         <span class="greeting">Hi im </span>
         <span class="main-name">Muhammad Fadll</span
         ><span class="status">a web developer</span>
-      </p>
+      </h1>
     </div>
   </header>
 </template>
@@ -159,11 +159,18 @@ header {
       }
 
       .status {
-        text-align: right;
         color: $primary;
-        width: 30%;
-        align-self: flex-end;
+        margin-top: 1rem;
         line-height: 30px;
+        width: 30%;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .personal-intro {
+      .status {
+        text-align: right;
+        align-self: flex-end;
       }
     }
   }

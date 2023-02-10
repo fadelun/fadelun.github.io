@@ -60,7 +60,7 @@ export default {
         {
           name: "todoApp",
           image: require("@/assets/resource/apptodo.png"),
-          source: "https://fadelun.github.io/apptodo/",
+          source: "https://fadelun.github.io/appTodo/",
           tag: ["Tailwind", "Vanilla JS"],
           desc: "todo list sederhana yang merupakan challange dari Frontend Mentor",
         },
