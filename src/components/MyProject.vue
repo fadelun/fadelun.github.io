@@ -154,13 +154,13 @@ export default {
     }
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #my-project {
     .showcase-menu {
       gap: 2.4rem;
       .project {
         width: 30%;
-        max-height: 400px;
+        max-height: 320px;
 
         .image-contain {
           min-height: 160px;

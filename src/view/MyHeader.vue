@@ -1,9 +1,6 @@
 <template>
   <header>
     <MyNavbar />
-    <!-- <p style="color: white; position: fixed; top: 1rem; left: 2rem">
-      
-    </p> -->
 
     <nav class="navbar-left link-accounts">
       <!-- github, instagram, codepen -->
@@ -184,14 +181,12 @@ header {
 
       li {
         width: 24px;
-        // height: 30%;
-
         svg {
           width: 100%;
           opacity: 0.4;
 
           &:hover {
-            opacity: 1;
+            opacity: 1 !important;
           }
         }
       }

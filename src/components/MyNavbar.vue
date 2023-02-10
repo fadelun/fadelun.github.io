@@ -103,6 +103,7 @@ header {
 
             &:hover {
               color: $primary;
+              opacity: 1;
 
               &::before {
                 transform: scaleX(1);
