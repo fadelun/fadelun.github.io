@@ -54,7 +54,6 @@ export default {
       const playAnimation = () => {
         const targetPosition =
           target.getBoundingClientRect().top + window.pageYOffset;
-
         const windowPosition = this.scrollValue + window.innerHeight - 50;
         // console.log("posisi target: " + targetPosition);
         // console.log(this.scrollValue);
@@ -110,7 +109,7 @@ export default {
       .project-description {
         color: $white;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 2.4rem 20px;
         overflow: auto;
 

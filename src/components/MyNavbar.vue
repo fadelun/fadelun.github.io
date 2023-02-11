@@ -10,22 +10,25 @@
       </a>
     </div>
     <div class="button-bars" @click="navActive = !navActive">
-      {{ navActive }}
-      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M3.00183 6.9306H23.3143C23.7458 6.9306 24.0956 6.58085 24.0956 6.14935V4.19623C24.0956 3.76473 23.7458 3.41498 23.3143 3.41498H3.00183C2.57034 3.41498 2.22058 3.76473 2.22058 4.19623V6.14935C2.22058 6.58085 2.57034 6.9306 3.00183 6.9306ZM3.00183 14.7431H23.3143C23.7458 14.7431 24.0956 14.3933 24.0956 13.9619V12.0087C24.0956 11.5772 23.7458 11.2275 23.3143 11.2275H3.00183C2.57034 11.2275 2.22058 11.5772 2.22058 12.0087V13.9619C2.22058 14.3933 2.57034 14.7431 3.00183 14.7431ZM3.00183 22.5556H23.3143C23.7458 22.5556 24.0956 22.2058 24.0956 21.7744V19.8212C24.0956 19.3897 23.7458 19.04 23.3143 19.04H3.00183C2.57034 19.04 2.22058 19.3897 2.22058 19.8212V21.7744C2.22058 22.2058 2.57034 22.5556 3.00183 22.5556Z"
-          fill="black"
-        />
-      </svg>
+      <img
+        v-show="!navActive"
+        :src="require('../assets/resource/menu.png')"
+        alt="menu-button"
+      />
+      <img
+        v-show="navActive"
+        :src="require('../assets/resource/x.png')"
+        alt="close-button"
+      />
     </div>
     <nav class="navbar-header" :class="{ 'nav-active': navActive }">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#my-project">Project</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a @click="navActive = false" href="#">Home</a></li>
+        <li><a @click="navActive = false" href="#about">About</a></li>
+        <li><a @click="navActive = false" href="#my-project">Project</a></li>
+        <li><a @click="navActive = false" href="#contact">Contact</a></li>
       </ul>
-      <div class="navbar-accounts">
+      <div v-show="navActive" class="navbar-accounts">
         <a href="#"
           ><svg
             viewBox="0 0 80 80"
@@ -128,12 +131,14 @@ header {
     }
     .button-bars {
       display: block;
+      position: fixed;
+      right: 1rem;
       width: 3rem;
       cursor: pointer;
+      z-index: 99;
 
-      svg {
-        filter: invert(76%) sepia(100%) saturate(15%) hue-rotate(290deg)
-          brightness(109%) contrast(104%);
+      & > img {
+        width: 100%;
       }
     }
 
