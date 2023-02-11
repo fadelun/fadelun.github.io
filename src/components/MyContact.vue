@@ -4,7 +4,7 @@
     <h4 class="text">Connect with me</h4>
     <ul class="contact-container">
       <li class="my-contact">
-        <a href="">
+        <a href="https://codepen.io/muhammadfadll">
           <svg
             width="80"
             height="80"
@@ -27,7 +27,9 @@
         </a>
       </li>
       <li class="my-contact">
-        <a href="">
+        <a
+          href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=fadeljourney@gmail.com"
+        >
           <svg
             width="81"
             height="81"
@@ -53,7 +55,7 @@
         </a>
       </li>
       <li class="my-contact">
-        <a href="">
+        <a href="https://github.com/fadelun">
           <svg
             width="80"
             height="80"
@@ -69,7 +71,7 @@
         </a>
       </li>
       <li class="my-contact">
-        <a href="">
+        <a href="https://www.instagram.com/fadelun_10/">
           <svg
             width="80"
             height="80"
@@ -85,7 +87,7 @@
         </a>
       </li>
       <li class="my-contact">
-        <a href="">
+        <a href="https://www.linkedin.com/in/muhammadfadll">
           <svg
             width="80"
             height="80"

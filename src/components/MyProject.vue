@@ -128,7 +128,7 @@ export default {
           left: 8px;
 
           & > svg {
-            opacity: 1 !important;
+            opacity: 0.8 !important;
           }
         }
 

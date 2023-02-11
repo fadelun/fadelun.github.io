@@ -5,7 +5,7 @@
     <nav class="navbar-left link-accounts">
       <!-- github, instagram, codepen -->
       <li>
-        <a href="#"
+        <a href="https://github.com/fadelun"
           ><svg
             viewBox="0 0 80 80"
             fill="none"
@@ -19,7 +19,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.instagram.com/fadelun_10/">
           <svg
             viewBox="0 0 80 80"
             fill="none"
@@ -33,7 +33,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://codepen.io/muhammadfadll">
           <svg
             viewBox="0 0 80 80"
             fill="none"
