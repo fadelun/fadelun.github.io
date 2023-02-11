@@ -118,6 +118,7 @@ export default {
 
 header {
   font-family: Oswald, sans-serif;
+  width: 100%;
   height: 100vh;
   padding-top: 40px;
 
@@ -133,7 +134,8 @@ header {
     justify-content: center;
 
     .personal-intro {
-      font-size: 80px;
+      // font-size: 80px;
+      font-size: calc(40px + 3vw);
       font-weight: bold;
       display: flex;
       flex-direction: column;
@@ -167,7 +169,8 @@ header {
     }
   }
   @media (min-width: 768px) {
-    .personal-intro {
+    #banner > .personal-intro {
+      font-size: 80px;
       .status {
         text-align: right;
         align-self: flex-end;
