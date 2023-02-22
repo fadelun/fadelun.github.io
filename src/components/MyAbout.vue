@@ -17,7 +17,7 @@
       <li>SCSS</li>
       <li>Figma</li>
       <li>React</li>
-      <li>Vue 3 (currently learn)</li>
+      <li>Vue</li>
       <li>Git</li>
       <li>Visual Studio Code</li>
     </ul>
