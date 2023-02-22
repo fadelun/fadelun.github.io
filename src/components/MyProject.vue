@@ -4,14 +4,14 @@
     <ul v-show="showcase" class="showcase-menu">
       <li v-for="project in showcase" :key="project" class="project">
         <div class="image-contain">
-          <a :href="project.source">
+          <a :href="project.source.demo">
             <img
               :src="project.image"
               :alt="project.name"
               class="project-image"
             />
           </a>
-          <a class="repo" :href="project.source">
+          <a class="repo" :href="project.source.repo">
             <svg
               viewBox="0 0 80 80"
               fill="none"
