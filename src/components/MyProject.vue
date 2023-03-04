@@ -57,12 +57,12 @@ export default {
     [...allTarget].forEach((target) => {
       const animation = anime({
         targets: target,
-        translateY: [300, 0],
+        perspective: [2500, 0],
+        rotateY: [100, 0],
         opacity: [0, 1],
-        duration: 740,
+        duration: 1000,
         autoplay: false,
-        easing: "easeInOutCubic",
-
+        easing: "linear",
         delay: 100,
       });
 
