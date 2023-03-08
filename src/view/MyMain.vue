@@ -18,7 +18,9 @@ export default {
     MyContact,
   },
   props: ["scrollValue"],
-
+  created() {
+    document.title = "Muhammad Fadll | Personal Portfolio";
+  },
   data() {
     return {
       showcase: [

@@ -133,7 +133,7 @@ header {
       display: block;
       position: fixed;
       right: 1rem;
-      width: 3rem;
+      width: 1.25rem;
       cursor: pointer;
       z-index: 99;
 

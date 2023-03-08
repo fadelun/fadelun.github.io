@@ -93,7 +93,7 @@ export default {
     color: $white;
   }
   .description {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 300;
   }
 
@@ -104,7 +104,7 @@ export default {
 
   .skill-list {
     box-sizing: border-box;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1.2rem 0;
     width: 100%;
     height: 400px;
@@ -150,6 +150,15 @@ export default {
       -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
       transform: translateX(0);
+    }
+  }
+  @media (min-width: 768px) {
+    .description {
+      font-size: 1.6rem;
+    }
+
+    .skill-list {
+      font-size: 1.2rem;
     }
   }
 }

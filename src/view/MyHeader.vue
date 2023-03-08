@@ -134,8 +134,7 @@ header {
     justify-content: center;
 
     .personal-intro {
-      // font-size: 80px;
-      font-size: calc(40px + 3vw);
+      font-size: calc(32px + 3vw);
       font-weight: bold;
       display: flex;
       flex-direction: column;

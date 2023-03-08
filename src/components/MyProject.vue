@@ -70,8 +70,6 @@ export default {
         const targetPosition =
           target.getBoundingClientRect().top + window.pageYOffset;
         const windowPosition = this.scrollValue + window.innerHeight - 50;
-        // console.log("posisi target: " + targetPosition);
-        // console.log(this.scrollValue);
 
         if (windowPosition > targetPosition) {
           animation.play();
@@ -163,7 +161,7 @@ export default {
 
         .text {
           margin-bottom: 2rem;
-          font-size: 1.4rem;
+          font-size: 1rem;
         }
         .project-meta-stack {
           display: flex;
@@ -201,7 +199,6 @@ export default {
           padding: 1.2rem;
           .text {
             margin-bottom: 1.4rem;
-            font-size: 1rem;
           }
           .project-meta-stack p {
             font-size: 0.8rem;
