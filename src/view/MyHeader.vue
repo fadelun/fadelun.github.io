@@ -183,7 +183,7 @@ header {
       flex-wrap: wrap;
       justify-content: space-between;
       width: 24px;
-      position: fixed;
+      position: absolute;
       bottom: 2rem;
       left: 36px;
       height: 200px;

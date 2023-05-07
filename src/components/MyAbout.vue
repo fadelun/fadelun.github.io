@@ -22,8 +22,9 @@
       <li>Visual Studio Code</li>
     </ul>
 
-    <a href="#" class="button btn">See more</a>
-  </article>
+    <!-- tahap pengembangan
+     <a href="#" class="button btn">See more</a>
+  --></article>
 </template>
 <script>
 export default {
