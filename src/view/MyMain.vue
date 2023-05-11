@@ -25,8 +25,30 @@ export default {
     return {
       showcase: [
         {
+          name: "tweet-generator",
+          image: require("@/assets/resource/projects/tweet-generator.png"),
+          source: {
+            demo: "https://twitter-status-generator.vercel.app",
+            repo: "https://github.com/fadelun/tweet-generator",
+          },
+
+          tag: ["Vue", "Tailwind"],
+          desc: "",
+        },
+        {
+          name: "QR-code-generator",
+          image: require("@/assets/resource/projects/QR-code-generator.png"),
+          source: {
+            demo: "https://qr-code-generate-navy.vercel.app/",
+            repo: "https://github.com/fadelun/QR-code-generator",
+          },
+
+          tag: ["Vue", "Tailwind"],
+          desc: "",
+        },
+        {
           name: "Time tracking dashboard",
-          image: require("@/assets/resource/time-tracking-dashboard.png"),
+          image: require("@/assets/resource/projects/time-tracking-dashboard.png"),
           source: {
             demo: "https://fadelun.github.io/time-tracking-dashboard",
             repo: "https://github.com/fadelun/time-tracking-dashboard",
@@ -37,7 +59,7 @@ export default {
         },
         {
           name: "Rest countries API",
-          image: require("@/assets/resource/rest-countries-api.jpg"),
+          image: require("@/assets/resource/projects/rest-countries-api.jpg"),
           source: {
             demo: "https://rest-countries-api-fadelun.vercel.app/",
             repo: "https://github.com/fadelun/rest-countries-api",
@@ -48,7 +70,7 @@ export default {
         },
         {
           name: "Pricing component with toggle",
-          image: require("@/assets/resource/pricing-component-with-toggle.png"),
+          image: require("@/assets/resource/projects/pricing-component-with-toggle.png"),
           source: {
             demo: "https://fadelun.github.io/Pricing-component-with-toggle",
             repo: "https://github.com/fadelun/Pricing-component-with-toggle",
@@ -58,7 +80,7 @@ export default {
         },
         {
           name: "Tekken 7",
-          image: require("@/assets/resource/tekken-7.png"),
+          image: require("@/assets/resource/projects/tekken-7.png"),
           source: {
             demo: "https://fadelun.github.io/tekken-7/",
             repo: "https://github.com/fadelun/tekken-7",
@@ -68,17 +90,17 @@ export default {
         },
         {
           name: "bikees",
-          image: require("@/assets/resource/bikees.png"),
+          image: require("@/assets/resource/projects/bikees.png"),
           source: {
             demo: "https://bikees-psi.vercel.app/",
             repo: "https://github.com/fadelun/bikees",
           },
-          tag: ["React js ", "Tailwind", "Carousel"],
+          tag: ["React js", "Tailwind", "Carousel"],
           desc: "informasi tentan sepeda, sparepart dan harga ",
         },
         {
           name: "todoApp",
-          image: require("@/assets/resource/apptodo.png"),
+          image: require("@/assets/resource/projects/apptodo.png"),
           source: {
             demo: "https://fadelun.github.io/appTodo/",
             repo: "https://github.com/fadelun/appTodo",
@@ -88,18 +110,18 @@ export default {
         },
         {
           name: "EA-Need for speed",
-          image: require("@/assets/resource/ea-need-for-speed.png"),
+          image: require("@/assets/resource/projects/ea-need-for-speed.png"),
           source: {
             demo: "https://ea-nfs-clone.vercel.app/",
             repo: "https://github.com/fadelun/EA-NFS-clone",
           },
-          tag: ["Vue js ", "Tailwind", "Landing page"],
+          tag: ["Vue", "Tailwind", "Landing page"],
           desc: "project ini merupakan redesign dari website resminya dengan menerapkan ketentuan UI dan UX",
         },
 
         {
           name: "Math for kids",
-          image: require("@/assets/resource/math-for-kids.png"),
+          image: require("@/assets/resource/projects/math-for-kids.png"),
           source: {
             demo: "https://fadelun.github.io/Math/",
             repo: "https://github.com/fadelun/Math",

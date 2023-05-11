@@ -39,14 +39,6 @@ export default {
   name: "MyProject",
   props: ["showcase", "scrollValue"],
 
-  data() {
-    return {
-      // untuk keterangan teknologi yang diguanakan (rencana)
-      // tailwindSVG: require("../assets/resource/icons8-tailwind-css.svg"),
-      // vueSVG: require("../assets/resource/icons8-vue-js.svg.svg"),
-    };
-  },
-
   mounted() {
     const allTarget = document.querySeslectorAll(".showcase-menu .project");
 
