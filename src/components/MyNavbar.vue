@@ -10,13 +10,14 @@
       </a>
     </div>
     <div class="button-bars" @click="navActive = !navActive">
+      <!-- why v-show it doesnt work? -->
       <img
-        v-show="!navActive"
+        v-if="!navActive"
         :src="require('../assets/resource/menu.png')"
         alt="menu-button"
       />
       <img
-        v-show="navActive"
+        v-if="navActive"
         :src="require('../assets/resource/x.png')"
         alt="close-button"
       />
@@ -28,7 +29,8 @@
         <li><a @click="navActive = false" href="#my-project">Project</a></li>
         <li><a @click="navActive = false" href="#contact">Contact</a></li>
       </ul>
-      <div v-show="navActive" class="navbar-accounts">
+      <!-- why v-show it doesnt work? -->
+      <div v-if="navActive" class="navbar-accounts">
         <a href="#"
           ><svg
             viewBox="0 0 80 80"
@@ -76,6 +78,14 @@
         </a>
       </div>
     </nav>
+    <div class="selecet">
+      <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option>ID</option>
+        <option>EN</option>
+        <option>AR</option>
+      </select>
+    </div>
   </div>
 </template>
 <script>
