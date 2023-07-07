@@ -78,18 +78,18 @@
         </a>
       </div>
     </nav>
-    <div class="selecet">
-      <select v-model="selected">
-        <option disabled value="">Please select one</option>
-        <option>ID</option>
-        <option>EN</option>
-        <option>AR</option>
+    <div class="select">
+      <select id="languages" v-model="store.lang">
+        <option value="ID">ID</option>
+        <option value="EN">EN</option>
+        <!-- <option value="AR">AR</option> -->
       </select>
     </div>
   </div>
 </template>
 <script>
 import anime from "animejs";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "MyNavbar",
@@ -113,7 +113,10 @@ export default {
   },
   data() {
     return {
+      store: useUserStore(),
       navActive: false,
+
+      // selectedLang: "EN",
     };
   },
 };
@@ -218,6 +221,30 @@ header {
             }
           }
         }
+      }
+    }
+    .select select {
+      // remove arrow select
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      //
+      padding: 0.4rem 0.8rem;
+      font-size: inherit;
+      font-family: inherit;
+      border: transparent;
+      color: $white;
+      background-color: $secondary;
+
+      &:focus {
+        color: $primary;
+
+        option {
+          color: $white;
+        }
+      }
+
+      option {
+        background-color: $secondary;
       }
     }
   }

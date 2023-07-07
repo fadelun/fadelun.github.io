@@ -2,12 +2,12 @@
   <article id="about">
     <h2>About me</h2>
     <p class="description">
-      I am a college student at the Imam Syafi'i Islamic College Jember from the
-      Faculty of Islamic Family Law. Besides studying Islam, I have an interest
-      in the world of technology, such as web design and programming.
+      {{ store.lang == "ID" ? store.about.ID.desc : store.about.EN.desc }}
     </p>
 
-    <p class="skill">Here are a few technologies I’ve been working with:</p>
+    <p class="skill">
+      {{ store.lang == "ID" ? store.about.ID.skill : store.about.EN.skill }}
+    </p>
     <ul class="skill-list">
       <li>HTML</li>
       <li>CSS</li>
@@ -27,11 +27,13 @@
   --></article>
 </template>
 <script>
+import { useUserStore } from "@/stores";
 export default {
   name: "MyAbout",
 
   data() {
     return {
+      store: useUserStore(),
       education: [
         {
           name: "freecodecamp",

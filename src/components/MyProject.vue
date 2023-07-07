@@ -1,8 +1,9 @@
 <template>
   <article id="my-project">
     <h2>My Project</h2>
-    <ul v-show="showcase" class="showcase-menu">
-      <li v-for="project in showcase" :key="project" class="project">
+
+    <ul v-show="store.showcase" class="showcase-menu">
+      <li v-for="project in store.showcase" :key="project" class="project">
         <div class="image-contain">
           <a :href="project.source.demo">
             <img
@@ -34,10 +35,16 @@
 </template>
 <script>
 import anime from "animejs";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "MyProject",
-  props: ["showcase", "scrollValue"],
+  props: ["scrollValue"],
+  data() {
+    return {
+      store: useUserStore(),
+    };
+  },
 
   mounted() {
     const allTarget = document.querySeslectorAll(".showcase-menu .project");
