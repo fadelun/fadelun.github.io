@@ -12,12 +12,12 @@
     <div class="button-bars" @click="navActive = !navActive">
       <!-- why v-show it doesnt work? -->
       <img
-        v-if="!navActive"
+        v-show="!navActive"
         :src="require('../assets/resource/menu.png')"
         alt="menu-button"
       />
       <img
-        v-if="navActive"
+        v-show="navActive"
         :src="require('../assets/resource/x.png')"
         alt="close-button"
       />
@@ -82,7 +82,7 @@
       <select id="languages" v-model="store.lang">
         <option value="ID">ID</option>
         <option value="EN">EN</option>
-        <!-- <option value="AR">AR</option> -->
+        <option value="AR">AR</option>
       </select>
     </div>
   </div>
@@ -115,9 +115,17 @@ export default {
     return {
       store: useUserStore(),
       navActive: false,
-
-      // selectedLang: "EN",
+      selectLang: "",
     };
+  },
+  watch: {
+    "store.lang"(newValue) {
+      // jika store.lang berupa "AR" maka ubah font tersebut ke "Droid Arabic Naskh"
+      document.getElementById("app").style.fontFamily =
+        newValue == "AR"
+          ? `"Droid Arabic Naskh", "Open Sans"`
+          : `"Open Sans", sans-serif"`;
+    },
   },
 };
 </script>
