@@ -14,11 +14,15 @@ export const useUserStore = defineStore('user', () => {
         "EN": {
             "desc": "I am a college student at the Imam Syafi'i Islamic College Jember from the Faculty of Islamic Family Law. Besides studying Islam, I have an interest in the world of technology, such as web design and programming.",
             "skill": "Here are a few technologies I’ve been working with:"
+        },
+        "AR": {
+            "desc": "أنا طالب من قسم الأحوال الشخصية من كلية الإمام الشافعي للدراسات الإسلامية جمبر. و لدي اهتمام بعالم التكنولوجيا، مثل تصميم المواقع والبرمجة ",
+            "skill": "هنا بعض التقنيات التي كنت أعمل عليها:"
         }
     })
     const showcase = ref([
         {
-            name: "tweet-generator",
+            name: "Tweet generator",
             image: require("@/assets/resource/projects/tweet-generator.png"),
             source: {
                 demo: "https://twitter-status-generator.vercel.app",
@@ -26,10 +30,14 @@ export const useUserStore = defineStore('user', () => {
             },
 
             tag: ["Vue", "Tailwind"],
-            desc: "",
+            desc: {
+                "ID": "Membuat tweet cukup dengan gambar",
+                "EN": "Creating tweets with just an image",
+                "AR": "إنشاء تغريدة يكفي بصورة"
+            }
         },
         {
-            name: "QR-code-generator",
+            name: "QR code generator",
             image: require("@/assets/resource/projects/QR-code-generator.png"),
             source: {
                 demo: "https://qr-code-generate-navy.vercel.app/",
@@ -37,7 +45,11 @@ export const useUserStore = defineStore('user', () => {
             },
 
             tag: ["Vue", "Tailwind"],
-            desc: "",
+            desc: {
+                "ID": "Masukan link dan buatlah qr code versimu",
+                "EN": "input the link and create your own qr code",
+                "AR": "أدخل الرابط وأنشئ رمز الاستجابة السريعة الخاص بك"
+            }
         },
         {
             name: "Time tracking dashboard",
@@ -47,8 +59,15 @@ export const useUserStore = defineStore('user', () => {
                 repo: "https://github.com/fadelun/time-tracking-dashboard",
             },
 
+
             tag: ["React js", "Tailwind"],
-            desc: "Time tracking dashboard salah satu project yang cocok untuk melatih penerapan grid",
+            desc: {
+                "ID": "Time tracking dashboard salah satu project yang cocok untuk melatih penerapan grid",
+                "EN": "Time tracking dashboard is one of the projects suitable for practicing grid",
+                "AR": "Time tracking dashboard من أحد المشاريع المناسب لممارسة grid "
+            }
+
+
         },
         {
             name: "Rest countries API",
@@ -58,8 +77,14 @@ export const useUserStore = defineStore('user', () => {
                 repo: "https://github.com/fadelun/rest-countries-api",
             },
 
+
             tag: ["React js", "Tailwind", "Rest API"],
-            desc: "Rest countries adalah proyek yang dibuat dengan API yang juga memiliki fitur mengubah tema. Anda dapat melihat daftar semua negara dan menemukan negara tertentu melalui pencarian atau dengan memfilter wilayah. Dengan menavigasi ke halaman masing-masing negara, Anda dapat melihat detail lebih lanjut tentang negara seperti nama asli dan bahkan negara perbatasan.",
+            desc: {
+                "ID": "Rest countries adalah proyek yang dibuat dengan API yang juga memiliki fitur mengubah tema. Anda dapat melihat daftar semua negara dan menemukan negara tertentu melalui pencarian atau dengan memfilter wilayah. Dengan menavigasi ke halaman masing-masing negara, Anda dapat melihat detail lebih lanjut tentang negara seperti nama asli dan bahkan negara perbatasan.",
+                "EN": "Rest Countries is a project created with an API that also has a feature to change themes. You can view a list of all countries and find a specific country by searching or filtering regions. By navigating to the page of each country, you can see further details about the country, such as its native name and even its bordering countries.",
+                "AR": "Rest Countries مشروع تم إنشاؤه باستخدام واجهة برمجة التطبيقات (API) تتضمن أيضًا ميزة تغيير الثيمات. يمكنك عرض قائمة بجميع الدول والعثور على دولة محددة من خلال البحث أو تصفية المناطق. من خلال التنقل إلى صفحة كل دولة ، يمكنك رؤية تفاصيل إضافية حول الدولة ، مثل اسمها الأصلي وحتى الدول المجاورة له"
+            },
+
         },
         {
             name: "Pricing component with toggle",
@@ -69,7 +94,12 @@ export const useUserStore = defineStore('user', () => {
                 repo: "https://github.com/fadelun/Pricing-component-with-toggle",
             },
             tag: ["HTML5 ", "Tailwind"],
-            desc: "Pricing component adalah sala satu challange yang diberikan oleh Frontend Mentor untuk menguji kemampuan bagaiamana cara membuat web agar terlihat interactive",
+            desc: {
+                "ID": "Pricing component adalah sala satu challange yang diberikan oleh Frontend Mentor untuk menguji kemampuan bagaiamana cara membuat web agar terlihat interactive",
+                "EN": "The Pricing component is one of the challenges provided by Frontend Mentor to test the ability to create a web page that appears interactive.",
+                "AR": "هو أحد التحديات التي يقدمها Frontend Mentor لاختبار القدرة على إنشاء صفحة ويب تبدو تفاعلية."
+            }
+
         },
         {
             name: "Tekken 7",
@@ -79,37 +109,68 @@ export const useUserStore = defineStore('user', () => {
                 repo: "https://github.com/fadelun/tekken-7",
             },
             tag: ["Bootstrap", "Vanilla JS"],
-            desc: "project tiruan dari web resminya, yang menarik disini adalah menerapkan logic perulangan untuk menampilkan nama, info dan gambar karakter. Disertai dengan animasi ketika meng-hover salah satu dari karakter tersebut",
+            desc: {
+                "ID": "Menampilkan nama, info dan gambar karakter tekken dengan menggunakan perulangan, dan sedikit tambahan animasi. ",
+                "EN": "Displaying the names, info, and images of Tekken characters using loops, along with some additional animation.",
+                "AR": "عرض أسماء ومعلومات وصور شخصيات تيكن باستخدام حلقات التكرار، مع إضافة بعض الرسوم المتحركة البسيطة."
+            }
+
         },
         {
-            name: "bikees",
+            name: "Bikees",
             image: require("@/assets/resource/projects/bikees.png"),
             source: {
                 demo: "https://bikees-psi.vercel.app/",
                 repo: "https://github.com/fadelun/bikees",
             },
             tag: ["React js", "Tailwind", "Carousel"],
-            desc: "informasi tentan sepeda, sparepart dan harga ",
+            desc: {
+                "ID": "Mencoba membuat Pagination yang menampilkan Informasi tentang sepeda, sparepart dan harga.",
+                "EN": "Trying to create a pagination that displays information about bicycles, spare parts, and prices.",
+                "AR": "محاولة إنشاء تقسيم الصفحات الذي يعرض معلومات عن الدراجات، قطع الغيار، والأسعار"
+            }
+
         },
         {
-            name: "todoApp",
+            name: "TodoApp",
             image: require("@/assets/resource/projects/apptodo.png"),
             source: {
                 demo: "https://fadelun.github.io/appTodo/",
                 repo: "https://github.com/fadelun/appTodo",
             },
             tag: ["Tailwind", "Vanilla JS"],
-            desc: "todo list sederhana yang merupakan challange dari Frontend Mentor",
+            desc: {
+                "ID": "todo list sederhana yang merupakan challange dari Frontend Mentor",
+                "EN": "A simple todo list that is a challenge from Frontend Mentor",
+                "AR": "قائمة مهام بسيطة تمثل تحديًا من Frontend Mentor."
+            }
+
+
         },
+        // {
+        //     name: "EA-Need for speed",
+        //     image: require("@/assets/resource/projects/ea-need-for-speed.png"),
+        //     source: {
+        //         demo: "https://ea-nfs-clone.vercel.app/",
+        //         repo: "https://github.com/fadelun/EA-NFS-clone",
+        //     },
+        //     tag: ["Vue", "Tailwind", "Landing page"],
+        //     desc: "project ini merupakan redesign dari website resminya dengan menerapkan ketentuan UI dan UX",
+        // },
         {
-            name: "EA-Need for speed",
+            name: "Calculator",
             image: require("@/assets/resource/projects/ea-need-for-speed.png"),
             source: {
-                demo: "https://ea-nfs-clone.vercel.app/",
-                repo: "https://github.com/fadelun/EA-NFS-clone",
+                demo: "https://fadelun.github.io/calculator/",
+                repo: "https://github.com/fadelun/calculator",
             },
-            tag: ["Vue", "Tailwind", "Landing page"],
-            desc: "project ini merupakan redesign dari website resminya dengan menerapkan ketentuan UI dan UX",
+            tag: ["HTML5", "CSS3", "Vanilla JS"],
+            desc: {
+                "ID": "Kalkulator sederhana",
+                "EN": "A simple Calculator",
+                "AR": "آلة حاسبة بسيطة"
+            }
+
         },
 
         {
@@ -120,7 +181,12 @@ export const useUserStore = defineStore('user', () => {
                 repo: "https://github.com/fadelun/Math",
             },
             tag: ["HTML5", "CSS3", "Vanilla JS"],
-            desc: "game math sederhana yang dirancang untuk melatih kemampuan berhitung pada anak",
+            desc: {
+                "ID": "game matematika sederhana, menampilkan pertanyaan secara acak",
+                "EN": "A simple math game, with random questions",
+                "AR": " لعبة رياضيات بسيطة، تعرض أسئلة عشوائية"
+            }
+
         },
 
 
