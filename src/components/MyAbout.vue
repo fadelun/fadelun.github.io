@@ -6,9 +6,7 @@
       {{ showAbout(store.about, store.lang) }}
     </p>
 
-    <p class="skill">
-      {{ showAboutSkill(store.about, store.lang) }}
-    </p>
+    <p class="skill">{{ showAboutSkill(store.about, store.lang) }}</p>
     <ul class="skill-list">
       <li>HTML</li>
       <li>CSS</li>

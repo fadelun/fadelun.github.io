@@ -9,15 +9,15 @@ export const useUserStore = defineStore('user', () => {
     const about = ref({
         "ID": {
             "desc": "Saya adalah seorang mahasiswa prodi Hukum keluarga islam dari Sekolah Tinggi Dirasat Islamiyah Imam Syafi'i Jember (STDIIS) . Saya memiliki ketertarikan di dunia teknologi, terutama di bidang web design dan progamming",
-            "skill": "Berikut beberapa teknologi yang sudah pernah saya gunakan:"
+            "skill": "Berikut beberapa teknologi yang sudah pernah saya gunakan"
         },
         "EN": {
             "desc": "I am a college student at the Imam Syafi'i Islamic College Jember from the Faculty of Islamic Family Law. Besides studying Islam, I have an interest in the world of technology, such as web design and programming.",
-            "skill": "Here are a few technologies I’ve been working with:"
+            "skill": "Here are a few technologies I’ve been working with"
         },
         "AR": {
             "desc": "أنا طالب من قسم الأحوال الشخصية من كلية الإمام الشافعي للدراسات الإسلامية جمبر. و لدي اهتمام بعالم التكنولوجيا، مثل تصميم المواقع والبرمجة ",
-            "skill": "هنا بعض التقنيات التي كنت أعمل عليها:"
+            "skill": "هنا بعض التقنيات التي كنت أعمل عليها"
         }
     })
     const showcase = ref([

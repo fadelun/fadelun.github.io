@@ -105,6 +105,8 @@ h4 {
   &.AR-lang {
     // font untuk bahasa arab
     font-family: "Droid Arabic Naskh", sans-serif !important;
+    text-align: right;
+    flex-direction: row-reverse;
   }
 
   footer {

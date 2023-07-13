@@ -152,9 +152,9 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 60px;
+    height: 85px;
     color: $white;
-    background-image: linear-gradient($secondary 70%, #ffffff00);
+    background-image: linear-gradient($secondary 80%, #ffffff00);
     display: flex;
     justify-content: space-between;
     align-items: center;
