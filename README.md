@@ -12,6 +12,7 @@
 ### Blogs posts
 
 <!-- BLOG-POST-LIST:START -->
+- [CSS — Menerapkan perubahan pada parent ketika child dihover](https://medium.com/@fadeljourney/css-menerapkan-perubahan-pada-parent-ketika-child-dihover-3566d2a0604f?source=rss-94cf1b9ccd6d------2)
 <!-- BLOG-POST-LIST:END -->
 
 <h3 align="left">Connect with me:</h3>
