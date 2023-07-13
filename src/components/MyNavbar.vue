@@ -162,7 +162,6 @@ header {
     z-index: 999;
 
     .main-logo {
-      flex-grow: 2;
       .img-logo {
         width: 96px;
       }
@@ -247,29 +246,32 @@ header {
         }
       }
     }
-    .select select {
-      // remove arrow select
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      //
-      order: 2;
-      padding: 0.4rem 0.8rem;
-      font-size: inherit;
-      font-family: inherit;
-      border: transparent;
-      color: $white;
-      background-color: $secondary;
+    .select {
+      flex-grow: 2;
+      select {
+        // remove arrow select
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        //
 
-      &:focus {
-        color: $primary;
+        padding: 0.4rem 0.8rem;
+        font-size: inherit;
+        font-family: inherit;
+        border: transparent;
+        color: $white;
+        background-color: $secondary;
+
+        &:focus {
+          color: $primary;
+
+          option {
+            color: $white;
+          }
+        }
 
         option {
-          color: $white;
+          background-color: $secondary;
         }
-      }
-
-      option {
-        background-color: $secondary;
       }
     }
   }
@@ -277,7 +279,7 @@ header {
   @media (min-width: 768px) {
     .navbar {
       .main-logo {
-        flex-grow: 0;
+        // flex-grow: 0;
       }
 
       .button-bars {
@@ -285,6 +287,9 @@ header {
       }
       nav.navbar-header {
         display: block;
+      }
+      .select {
+        flex-grow: 0;
       }
     }
   }
