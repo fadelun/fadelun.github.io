@@ -247,6 +247,9 @@ export default {
           .project-meta-stack p {
             font-size: 0.8rem;
           }
+          .desc {
+            padding-top: 2rem;
+          }
         }
       }
     }
