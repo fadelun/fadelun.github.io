@@ -1,13 +1,12 @@
 <template>
   <article id="about">
-    <h2>About me</h2>
+    <h2>{{ store.lang != "AR" ? "About me" : "عني" }}</h2>
     <p class="description">
-      I am a college student at the Imam Syafi'i Islamic College Jember from the
-      Faculty of Islamic Family Law. Besides studying Islam, I have an interest
-      in the world of technology, such as web design and programming.
+      <!-- menampilan deskripsi pada about -->
+      {{ showAbout(store.about, store.lang) }}
     </p>
 
-    <p class="skill">Here are a few technologies I’ve been working with:</p>
+    <p class="skill">{{ showAboutSkill(store.about, store.lang) }}</p>
     <ul class="skill-list">
       <li>HTML</li>
       <li>CSS</li>
@@ -27,48 +26,34 @@
   --></article>
 </template>
 <script>
+import { useUserStore } from "@/stores";
 export default {
   name: "MyAbout",
 
   data() {
     return {
-      education: [
-        {
-          name: "freecodecamp",
-          period: "2021",
-          info: "JavaScript Algorithms and Data Structures",
-        },
-        {
-          name: "Skilvul",
-          period: "2021",
-          info: "Javascript dasar",
-        },
-        {
-          name: "Progate",
-          period: "2021",
-          info: "dasar-dasar Sass dan git",
-        },
-        {
-          name: "BuildWith Angga",
-          period: "2020",
-          info: "Full stack web designer",
-        },
-      ],
-      languages: [
-        {
-          lang: "Indonesia",
-          info: "Native languages",
-        },
-        {
-          lang: "Indonesia",
-          info: "intermediate",
-        },
-        {
-          lang: "English",
-          info: "Basic",
-        },
-      ],
+      store: useUserStore(),
     };
+  },
+  methods: {
+    showAbout(about, lang) {
+      return lang == "ID"
+        ? about.ID.desc
+        : lang == "EN"
+        ? about.EN.desc
+        : lang == "AR"
+        ? about.AR.desc
+        : about.EN.desc;
+    },
+    showAboutSkill(about, lang) {
+      return lang == "ID"
+        ? about.ID.skill
+        : lang == "EN"
+        ? about.EN.skill
+        : lang == "AR"
+        ? about.AR.skill
+        : about.EN.skill;
+    },
   },
 };
 </script>

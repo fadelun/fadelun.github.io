@@ -1,7 +1,9 @@
 <template>
   <div id="contact">
-    <h2>My Contact</h2>
-    <h4 class="text">Connect with me</h4>
+    <h2>{{ store.lang != "AR" ? "My Contact" : "الاتصال" }}</h2>
+    <h4 class="text">
+      {{ store.lang != "AR" ? "Connect with me" : "تواصل معي" }}
+    </h4>
     <ul class="contact-container">
       <li class="my-contact">
         <a href="https://codepen.io/muhammadfadll">
@@ -107,10 +109,16 @@
 </template>
 <script>
 import anime from "animejs";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "MyContact",
   props: ["scrollValue"],
+  data() {
+    return {
+      store: useUserStore(),
+    };
+  },
   mounted() {
     const target = document.querySelectorAll(".contact-container li");
     const animation = anime({
@@ -127,8 +135,8 @@ export default {
         target[0].getBoundingClientRect().top + window.pageYOffset;
 
       const windowPosition = this.scrollValue + window.innerHeight;
-      console.log("posisi target: " + targetPosition);
-      console.log(this.scrollValue);
+      // console.log("posisi target: " + targetPosition);
+      // console.log(this.scrollValue);
 
       if (windowPosition > targetPosition) {
         animation.play();

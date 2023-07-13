@@ -10,6 +10,7 @@
       </a>
     </div>
     <div class="button-bars" @click="navActive = !navActive">
+      <!-- why v-show it doesnt work? -->
       <img
         v-show="!navActive"
         :src="require('../assets/resource/menu.png')"
@@ -23,11 +24,28 @@
     </div>
     <nav class="navbar-header" :class="{ 'nav-active': navActive }">
       <ul>
-        <li><a @click="navActive = false" href="#">Home</a></li>
-        <li><a @click="navActive = false" href="#about">About</a></li>
-        <li><a @click="navActive = false" href="#my-project">Project</a></li>
-        <li><a @click="navActive = false" href="#contact">Contact</a></li>
+        <li>
+          <a @click="navActive = false" href="#"
+            >{{ store.lang != "AR" ? "Home" : "الرئيسية" }}
+          </a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#about">{{
+            store.lang != "AR" ? "About" : "عني"
+          }}</a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#my-project">{{
+            store.lang != "AR" ? "Project" : "المشاريع"
+          }}</a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#contact">{{
+            store.lang != "AR" ? "Contact" : "الاتصال"
+          }}</a>
+        </li>
       </ul>
+      <!-- why v-show it doesnt work? -->
       <div v-show="navActive" class="navbar-accounts">
         <a href="#"
           ><svg
@@ -76,10 +94,18 @@
         </a>
       </div>
     </nav>
+    <div class="select">
+      <select id="languages" v-model="store.lang">
+        <option value="ID">ID</option>
+        <option value="EN">EN</option>
+        <option value="AR">AR</option>
+      </select>
+    </div>
   </div>
 </template>
 <script>
 import anime from "animejs";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "MyNavbar",
@@ -103,8 +129,19 @@ export default {
   },
   data() {
     return {
+      store: useUserStore(),
       navActive: false,
+      selectLang: "",
     };
+  },
+  watch: {
+    "store.lang"(newValue) {
+      // jika store.lang berupa "AR" maka ubah font tersebut ke "Droid Arabic Naskh"
+      const app = document.getElementById("app");
+      newValue == "AR"
+        ? app.classList.add("AR-lang")
+        : app.classList.remove("AR-lang");
+    },
   },
 };
 </script>
@@ -115,9 +152,9 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 60px;
+    height: 85px;
     color: $white;
-    background-image: linear-gradient($secondary 70%, #ffffff00);
+    background-image: linear-gradient($secondary 80%, #ffffff00);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,8 +167,9 @@ header {
       }
     }
     .button-bars {
+      order: 1;
       display: block;
-      position: fixed;
+      // position: fixed;
       right: 1rem;
       width: 1.25rem;
       cursor: pointer;
@@ -164,8 +202,6 @@ header {
           display: flex;
           gap: 1.4rem;
           justify-content: center;
-          // justify-content: space-around;
-          // width: 100%;
 
           a {
             width: 2rem;
@@ -210,15 +246,50 @@ header {
         }
       }
     }
+    .select {
+      flex-grow: 2;
+      select {
+        // remove arrow select
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        //
+
+        padding: 0.4rem 0.8rem;
+        font-size: inherit;
+        font-family: inherit;
+        border: transparent;
+        color: $white;
+        background-color: $secondary;
+
+        &:focus {
+          color: $primary;
+
+          option {
+            color: $white;
+          }
+        }
+
+        option {
+          background-color: $secondary;
+        }
+      }
+    }
   }
 
   @media (min-width: 768px) {
     .navbar {
+      .main-logo {
+        // flex-grow: 0;
+      }
+
       .button-bars {
         display: none;
       }
       nav.navbar-header {
         display: block;
+      }
+      .select {
+        flex-grow: 0;
       }
     }
   }
