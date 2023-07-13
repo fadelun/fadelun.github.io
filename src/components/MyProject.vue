@@ -1,6 +1,6 @@
 <template>
   <article id="my-project">
-    <h2>My Project</h2>
+    <h2>{{ store.lang != "AR" ? "My Project" : "المشاريع" }}</h2>
 
     <ul v-show="store.showcase" class="showcase-menu">
       <li v-for="project in store.showcase" :key="project" class="project">
@@ -24,9 +24,18 @@
             <p v-for="tag in project.tag" :key="tag">&lt; {{ tag }} /></p>
           </div>
           <div class="project-buttons">
-            <a class="repo-button btn" :href="project.source.repo"> Source </a>
+            <a class="repo-button btn" :href="project.source.repo">
+              {{ store.lang != "AR" ? "Source" : "مصدر" }}
+            </a>
 
-            <a class="demo-button btn" :href="project.source.demo"> Demo </a>
+            <a class="demo-button btn" :href="project.source.demo">
+              {{ store.lang != "AR" ? "Demo" : "تجربي" }}
+            </a>
+          </div>
+          <div class="desc">
+            <p>
+              {{ showDesc(project.desc, store.lang) }}
+            </p>
           </div>
         </div>
       </li>
@@ -45,9 +54,24 @@ export default {
       store: useUserStore(),
     };
   },
+  methods: {
+    showDesc(desc, lang) {
+      if (typeof desc == "object") {
+        if (lang == "ID") {
+          return desc.ID;
+        } else if (lang == "EN") {
+          return desc.EN;
+        } else if (lang == "AR") {
+          return desc.AR;
+        }
+      }
+
+      return desc;
+    },
+  },
 
   mounted() {
-    const allTarget = document.querySeslectorAll(".showcase-menu .project");
+    const allTarget = document.querySelectorAll(".showcase-menu .project");
 
     [...allTarget].forEach((target) => {
       const animation = anime({

@@ -5,7 +5,7 @@ import { ref } from "vue"
 // the first argument is a unique id of the store across your application
 export const useUserStore = defineStore('user', () => {
     const name = ref("Muhammad Fadll");
-    const lang = ref("ID")
+    const lang = ref("ID");
     const about = ref({
         "ID": {
             "desc": "Saya adalah seorang mahasiswa prodi Hukum keluarga islam dari Sekolah Tinggi Dirasat Islamiyah Imam Syafi'i Jember (STDIIS) . Saya memiliki ketertarikan di dunia teknologi, terutama di bidang web design dan progamming",
@@ -159,7 +159,7 @@ export const useUserStore = defineStore('user', () => {
         // },
         {
             name: "Calculator",
-            image: require("@/assets/resource/projects/ea-need-for-speed.png"),
+            image: require("@/assets/resource/projects/calculator.png"),
             source: {
                 demo: "https://fadelun.github.io/calculator/",
                 repo: "https://github.com/fadelun/calculator",

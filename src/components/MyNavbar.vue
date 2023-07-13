@@ -24,13 +24,29 @@
     </div>
     <nav class="navbar-header" :class="{ 'nav-active': navActive }">
       <ul>
-        <li><a @click="navActive = false" href="#">Home</a></li>
-        <li><a @click="navActive = false" href="#about">About</a></li>
-        <li><a @click="navActive = false" href="#my-project">Project</a></li>
-        <li><a @click="navActive = false" href="#contact">Contact</a></li>
+        <li>
+          <a @click="navActive = false" href="#"
+            >{{ store.lang != "AR" ? "Home" : "الرئيسية" }}
+          </a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#about">{{
+            store.lang != "AR" ? "About" : "عني"
+          }}</a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#my-project">{{
+            store.lang != "AR" ? "Project" : "المشاريع"
+          }}</a>
+        </li>
+        <li>
+          <a @click="navActive = false" href="#contact">{{
+            store.lang != "AR" ? "Contact" : "الاتصال"
+          }}</a>
+        </li>
       </ul>
       <!-- why v-show it doesnt work? -->
-      <div v-if="navActive" class="navbar-accounts">
+      <div v-show="navActive" class="navbar-accounts">
         <a href="#"
           ><svg
             viewBox="0 0 80 80"
@@ -121,10 +137,10 @@ export default {
   watch: {
     "store.lang"(newValue) {
       // jika store.lang berupa "AR" maka ubah font tersebut ke "Droid Arabic Naskh"
-      document.getElementById("app").style.fontFamily =
-        newValue == "AR"
-          ? `"Droid Arabic Naskh", "Open Sans"`
-          : `"Open Sans", sans-serif"`;
+      const app = document.getElementById("app");
+      newValue == "AR"
+        ? app.classList.add("AR-lang")
+        : app.classList.remove("AR-lang");
     },
   },
 };
@@ -146,13 +162,15 @@ header {
     z-index: 999;
 
     .main-logo {
+      flex-grow: 2;
       .img-logo {
         width: 96px;
       }
     }
     .button-bars {
+      order: 1;
       display: block;
-      position: fixed;
+      // position: fixed;
       right: 1rem;
       width: 1.25rem;
       cursor: pointer;
@@ -185,8 +203,6 @@ header {
           display: flex;
           gap: 1.4rem;
           justify-content: center;
-          // justify-content: space-around;
-          // width: 100%;
 
           a {
             width: 2rem;
@@ -236,6 +252,7 @@ header {
       -webkit-appearance: none;
       -moz-appearance: none;
       //
+      order: 2;
       padding: 0.4rem 0.8rem;
       font-size: inherit;
       font-family: inherit;
@@ -259,6 +276,10 @@ header {
 
   @media (min-width: 768px) {
     .navbar {
+      .main-logo {
+        flex-grow: 0;
+      }
+
       .button-bars {
         display: none;
       }

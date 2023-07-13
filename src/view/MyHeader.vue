@@ -56,9 +56,14 @@
     </nav>
     <div id="banner">
       <h1 class="personal-intro">
-        <span class="greeting">Hi im </span>
-        <span class="main-name">Muhammad Fadll</span
-        ><span class="status">a web developer</span>
+        <span class="greeting"
+          >{{ store.lang != "AR" ? "Hi im" : "مرحباً" }}
+        </span>
+        <span class="main-name"
+          >{{ store.lang != "AR" ? "Muhammad Fadll" : "محمد فضل" }} </span
+        ><span class="status"
+          >{{ store.lang != "AR" ? "a web developer" : "مطور ويب" }}
+        </span>
       </h1>
     </div>
   </header>
@@ -67,11 +72,17 @@
 <script>
 import anime from "animejs";
 import MyNavbar from "../components/MyNavbar.vue";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "MyHeader",
   components: {
     MyNavbar,
+  },
+  data() {
+    return {
+      store: useUserStore(),
+    };
   },
 
   mounted() {

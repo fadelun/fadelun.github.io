@@ -1,12 +1,13 @@
 <template>
   <article id="about">
-    <h2>About me</h2>
+    <h2>{{ store.lang != "AR" ? "About me" : "عني" }}</h2>
     <p class="description">
-      {{ store.lang == "ID" ? store.about.ID.desc : store.about.EN.desc }}
+      <!-- menampilan deskripsi pada about -->
+      {{ showAbout(store.about, store.lang) }}
     </p>
 
     <p class="skill">
-      {{ store.lang == "ID" ? store.about.ID.skill : store.about.EN.skill }}
+      {{ showAboutSkill(store.about, store.lang) }}
     </p>
     <ul class="skill-list">
       <li>HTML</li>
@@ -34,43 +35,27 @@ export default {
   data() {
     return {
       store: useUserStore(),
-      education: [
-        {
-          name: "freecodecamp",
-          period: "2021",
-          info: "JavaScript Algorithms and Data Structures",
-        },
-        {
-          name: "Skilvul",
-          period: "2021",
-          info: "Javascript dasar",
-        },
-        {
-          name: "Progate",
-          period: "2021",
-          info: "dasar-dasar Sass dan git",
-        },
-        {
-          name: "BuildWith Angga",
-          period: "2020",
-          info: "Full stack web designer",
-        },
-      ],
-      languages: [
-        {
-          lang: "Indonesia",
-          info: "Native languages",
-        },
-        {
-          lang: "Indonesia",
-          info: "intermediate",
-        },
-        {
-          lang: "English",
-          info: "Basic",
-        },
-      ],
     };
+  },
+  methods: {
+    showAbout(about, lang) {
+      return lang == "ID"
+        ? about.ID.desc
+        : lang == "EN"
+        ? about.EN.desc
+        : lang == "AR"
+        ? about.AR.desc
+        : about.EN.desc;
+    },
+    showAboutSkill(about, lang) {
+      return lang == "ID"
+        ? about.ID.skill
+        : lang == "EN"
+        ? about.EN.skill
+        : lang == "AR"
+        ? about.AR.skill
+        : about.EN.skill;
+    },
   },
 };
 </script>

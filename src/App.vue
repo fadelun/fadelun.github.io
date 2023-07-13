@@ -12,6 +12,7 @@
 <script>
 import MyHeader from "./view/MyHeader.vue";
 import MyMain from "./view/MyMain.vue";
+import { useUserStore } from "@/stores";
 
 export default {
   name: "App",
@@ -22,6 +23,7 @@ export default {
   data() {
     return {
       scrollValue: 0,
+      store: useUserStore(),
     };
   },
   created() {
@@ -30,7 +32,6 @@ export default {
   methods: {
     scroll() {
       this.scrollValue = window.pageYOffset;
-      // console.log(this.scrollValue);
       return this.scrollValue;
     },
   },
@@ -101,6 +102,10 @@ h4 {
   color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &.AR-lang {
+    // font untuk bahasa arab
+    font-family: "Droid Arabic Naskh", sans-serif !important;
+  }
 
   footer {
     height: 80px;
