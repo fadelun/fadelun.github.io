@@ -1,8 +1,9 @@
 <template>
   <!-- portfolio vue x scss -->
 
-  <MyHeader />
+  <MyHeader ref="header" />
   <MyMain :scrollValue="scrollValue" />
+  <!-- <button id="myButton" ref="myButton">button</button> -->
 
   <footer>
     <p>Built by Muhammad ©2023</p>
@@ -29,6 +30,7 @@ export default {
   created() {
     window.addEventListener("scroll", this.scroll);
   },
+
   methods: {
     scroll() {
       this.scrollValue = window.pageYOffset;
@@ -105,8 +107,6 @@ h4 {
   &.AR-lang {
     // font untuk bahasa arab
     font-family: "Droid Arabic Naskh", sans-serif !important;
-    text-align: right;
-    flex-direction: row-reverse;
   }
 
   footer {

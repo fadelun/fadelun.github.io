@@ -138,9 +138,14 @@ export default {
     "store.lang"(newValue) {
       // jika store.lang berupa "AR" maka ubah font tersebut ke "Droid Arabic Naskh"
       const app = document.getElementById("app");
-      newValue == "AR"
-        ? app.classList.add("AR-lang")
-        : app.classList.remove("AR-lang");
+      const root = document.querySelector("html");
+      if (newValue == "AR") {
+        app.classList.add("AR-lang");
+        root.setAttribute("dir", "rtl");
+      } else {
+        app.classList.remove("AR-lang");
+        root.removeAttribute("dir");
+      }
     },
   },
 };
@@ -162,6 +167,7 @@ header {
     z-index: 999;
 
     .main-logo {
+      flex-grow: 2;
       .img-logo {
         width: 96px;
       }
@@ -246,32 +252,29 @@ header {
         }
       }
     }
-    .select {
-      flex-grow: 2;
-      select {
-        // remove arrow select
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        //
+    .select select {
+      // remove arrow select
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      //
 
-        padding: 0.4rem 0.8rem;
-        font-size: inherit;
-        font-family: inherit;
-        border: transparent;
-        color: $white;
-        background-color: $secondary;
+      padding: 0.4rem 0.8rem;
+      font-size: inherit;
+      font-family: inherit;
+      border: transparent;
+      color: $white;
+      background-color: $secondary;
 
-        &:focus {
-          color: $primary;
-
-          option {
-            color: $white;
-          }
-        }
+      &:focus {
+        color: $primary;
 
         option {
-          background-color: $secondary;
+          color: $white;
         }
+      }
+
+      option {
+        background-color: $secondary;
       }
     }
   }
@@ -279,7 +282,7 @@ header {
   @media (min-width: 768px) {
     .navbar {
       .main-logo {
-        // flex-grow: 0;
+        flex-grow: 0;
       }
 
       .button-bars {
@@ -287,9 +290,6 @@ header {
       }
       nav.navbar-header {
         display: block;
-      }
-      .select {
-        flex-grow: 0;
       }
     }
   }
