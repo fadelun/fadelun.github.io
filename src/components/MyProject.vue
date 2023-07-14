@@ -179,6 +179,9 @@ export default {
             margin: 0 4px 0;
           }
         }
+        .desc {
+          padding-top: 2rem;
+        }
         .project-buttons {
           display: flex;
           column-gap: 6px;
@@ -246,9 +249,6 @@ export default {
           }
           .project-meta-stack p {
             font-size: 0.8rem;
-          }
-          .desc {
-            padding-top: 2rem;
           }
         }
       }
