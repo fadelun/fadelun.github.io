@@ -6,7 +6,13 @@
   <!-- <button id="myButton" ref="myButton">button</button> -->
 
   <footer>
-    <p>Built by Muhammad ©2023</p>
+    <p>
+      {{
+        store.lang != "AR"
+          ? "Built by Muhammad Fadll ©2023"
+          : "بناه محمد فضل ©2023"
+      }}
+    </p>
   </footer>
 </template>
 

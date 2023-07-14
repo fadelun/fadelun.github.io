@@ -57,7 +57,7 @@
     <div id="banner">
       <h1 class="personal-intro">
         <span class="greeting"
-          >{{ store.lang != "AR" ? "Hi im" : "مرحباً" }}
+          >{{ store.lang != "AR" ? "Hi im" : "مرحباً أنا" }}
         </span>
         <span class="main-name"
           >{{ store.lang != "AR" ? "Muhammad Fadll" : "محمد فضل" }} </span
