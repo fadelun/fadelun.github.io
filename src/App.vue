@@ -9,8 +9,8 @@
     <p>
       {{
         store.lang != "AR"
-          ? "Built by Muhammad Fadll ©2023"
-          : "بناه محمد فضل ©2023"
+          ? "Built by Muhammad Fadll ©2024"
+          : "بناه محمد فضل ©2024"
       }}
     </p>
   </footer>
