@@ -24,7 +24,11 @@
             <p v-for="tag in project.tag" :key="tag">&lt; {{ tag }} /></p>
           </div>
           <div class="project-buttons">
-            <a class="repo-button btn" :href="project.source.repo">
+            <a
+              class="repo-button btn"
+              v-show="project.source.repo"
+              :href="project.source.repo"
+            >
               {{ store.lang != "AR" ? "Source" : "مصدر" }}
             </a>
 

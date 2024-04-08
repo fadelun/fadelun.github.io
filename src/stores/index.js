@@ -22,6 +22,21 @@ export const useUserStore = defineStore('user', () => {
     })
     const showcase = ref([
         {
+            name: "Mahramku",
+            image: require("@/assets/resource/projects/mahramku.png"),
+            source: {
+                demo: "https://mahramku.com/",
+                repo: "",
+            },
+
+            tag: ["Wordpress", "Bootstrap"],
+            desc: {
+                "ID": "Mahramku adalah sebuah website pencarian untuk mengetahui siapa saja mahram dari kerabat seseorang yang mana ketentuan mahram tersebut sudah dijelaskan di dalam syareat. sehingga dengan website ini dapat memudahkan kaum muslimin untuk mengetahui mahram dan bukan mahram dari kebarat mereka. ",
+                "EN": "Mahramku is a search website to find out who is the mahram of someone's relatives where the terms of the mahram have been explained in the Syareat. so that this website can make it easier for Muslims to find out their mahram and non-mahram relatives.",
+                "AR": "محرمكو هو موقع بحث لمعرفة من هو محرم أقارب شخص ما حيث تم شرح شروط المحرم في الشريعة. حتى يسهل هذا الموقع على المسلمين معرفة أقاربهم المحرم وغير المحرم."
+            }
+        },
+        {
             name: "Tweet generator",
             image: require("@/assets/resource/projects/tweet-generator.png"),
             source: {
