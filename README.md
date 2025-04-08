@@ -12,6 +12,7 @@
 ### Blogs posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Mengenal clamp&lpar;&rpar; di CSS: Cara Keren Atur Ukuran Font yang Responsif!](https://medium.com/@fadeljourney/mengenal-clamp-di-css-cara-keren-atur-ukuran-font-yang-responsif-cabeb6e7ad0f?source=rss-94cf1b9ccd6d------2)
 - [CSS — Menerapkan perubahan pada parent ketika child dihover](https://medium.com/@fadeljourney/css-menerapkan-perubahan-pada-parent-ketika-child-dihover-3566d2a0604f?source=rss-94cf1b9ccd6d------2)
 <!-- BLOG-POST-LIST:END -->
 
